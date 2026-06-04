@@ -2,7 +2,7 @@
 
 ### ISMB/ECCB 2026 — BOSC CollaborationFest project
 
-Help researchers register FAIR-aligned studies in minutes instead of hours by using LLMs and a set of CEDAR Model Context Protocol (MCP) servers to turn ordinary research artifacts — spreadsheets, data dictionaries, protocols, and papers — into draft, standards-compliant metadata for human review.
+Build a **reusable AI artifact** (a Claude Skill or Project) that turns any researcher's ordinary artifacts — spreadsheets, data dictionaries, protocols, papers — into draft, standards-compliant CEDAR metadata and a bootstrapped Canopy study, using a set of CEDAR Model Context Protocol (MCP) servers. The aim: register FAIR-aligned studies in minutes instead of hours, with a human still in the loop for review.
 
 ---
 
@@ -18,26 +18,26 @@ A natural foundation for this work is the set of **CEDAR MCP servers** we mainta
 
 ## Goals
 
+**The deliverable is a reusable AI artifact** — most likely a **Claude Skill** or a **Claude Project** (an MCP server is probably *not* the right shape, since the MCP servers already exist) — that can **drive the full 4-step workflow on its own**. The synthetic study in this repo is only an example input; the artifact must generalize to *any* researcher's datasets and documents.
+
 ### Core goals (the 2-day focus)
 
-1. **Build an end-to-end AI pipeline** that, given a study's artifacts (a spreadsheet + a protocol/paper PDF), produces:
-   - a filled **Canopy Study** metadata instance (against the shared Study template), and
-   - a **domain-specific** template *plus* a filled instance for that study's data.
-2. **Exercise the CEDAR MCP servers** end-to-end: author/validate templates and instances (`cedar-artifact-mcp`), look up controlled terms (`bioportal-term-mcp`), and push/pull artifacts to live CEDAR (`cedar-rest-mcp`).
-3. **Produce shareable synthetic sample data** (a synthetic study) so anyone can run the pipeline without sensitive real data — included in this repo under [`data/`](data/).
-4. **Define and document the deliverables clearly**: the pipeline is the final product, but the intermediate artifacts (templates and instances) are first-class deliverables too.
+1. **Decide the form of the deliverable** — a Claude Skill, a Claude Project, or another packaging that lets an LLM run the workflow end-to-end. (See [Deliverable](#the-deliverable) for the trade-offs.)
+2. **Build that artifact** so it can drive [Steps 1–4](#workflow): fill the Canopy Study template, design a domain-specific template, fill it, and create the study in Canopy.
+3. **Make it generic.** Given arbitrary input artifacts (spreadsheets, data dictionaries, protocols, papers, SOPs), it should produce valid CEDAR metadata — not just for our example study.
+4. **Prove it on the example.** Run the artifact against the bundled [synthetic study](#what-we-provide-example-input-data) and show the four steps complete end-to-end.
 
 ### Stretch goals
 
-- Ingest a Canopy Study + attached files directly into Canopy as a new submission (study-template / study-metadata / domain-specific-template / domain-specific-metadata) — see [Workflow Step 4](#step-4--submit-to-canopy).
 - A lightweight **review interface** so a curator can accept/edit suggested values before submission.
-- Add a "Pre-fill from metadata JSON" button to the Canopy *Create Study* page.
+- Add a "Pre-fill from metadata JSON" button to the Canopy *Create Study* page (supports [Step 4](#step-4--create-the-study-in-canopy)).
 - Confidence scores / provenance on each inferred field, so reviewers know what to check first.
-- Evaluate against a held-out study to measure how much manual effort the pipeline actually saves.
+- Evaluate against a held-out study to measure how much manual effort the artifact actually saves.
+- Package the artifact so others can install and run it against their own data in one step.
 
 ## MCP Servers (the foundation)
 
-The pipeline is built on focused [Model Context Protocol](https://modelcontextprotocol.io/) servers for CEDAR. They let any LLM client use CEDAR as a set of tools.
+The deliverable is built **on top of** focused [Model Context Protocol](https://modelcontextprotocol.io/) servers for CEDAR — it orchestrates them, it doesn't replace them. They let any LLM client use CEDAR as a set of tools.
 
 | MCP server | Status | What it does |
 |---|---|---|
@@ -50,69 +50,68 @@ The pipeline is built on focused [Model Context Protocol](https://modelcontextpr
 
 ## Workflow
 
-The target pipeline, expressed as the journey of a researcher who arrives with their data and leaves with a registered, FAIR study.
+This is the workflow the deliverable must drive. **Input (Step 0):** the researcher's artifacts — datasets (XLSX, relational exports, CSVs) and documents (papers, protocol, grant, SOP, supplementary PDFs). The bundled synthetic study is one such example; the workflow must work for any.
 
-### Step 0 — The researcher arrives
-The user brings the artifacts from a study:
-- **Datasets** — XLSX, relational exports, CSVs, etc.
-- **Documents** — papers, protocol, grant, SOP, supplementary PDFs.
+### Step 1 — Fill out the existing Canopy *Study* template
+Using AI tools, infer values for the shared **Canopy Study** template from the artifacts and produce a valid instance.
+- The Canopy Study template is an existing CEDAR template (readable mirror in [`templates/`](templates/)); pull it live from its well-known CEDAR location with **`cedar-rest-mcp`**.
+- Fill in a valid instance from the PDFs/datasets with **`cedar-artifact-mcp`**, anchoring controlled values via **`bioportal-term-mcp`**.
+- This Step 1 instance is what bootstraps the Canopy study in Step 4.
 
-### Step 1 — Define a domain-specific CEDAR template
-Design a template that describes the metadata for *this* study's datasets — controlled terms, field types, cardinality.
-- Author it with **`cedar-artifact-mcp`**.
-- Upload it to CEDAR with **`cedar-rest-mcp`** (requires a CEDAR account + API key).
-- View/verify it with **`cedar-cee-mcp`** or the CEDAR UI.
+### Step 2 — Create a domain-specific template
+Using AI tools, design a template that describes the metadata for *this* study's datasets — controlled terms, field types, cardinality (target shape in [`templates/domain-specific-template.yaml`](templates/domain-specific-template.yaml)).
+- Author it with **`cedar-artifact-mcp`**; resolve controlled terms with **`bioportal-term-mcp`**.
+- Upload it to CEDAR with **`cedar-rest-mcp`**; view/verify with **`cedar-cee-mcp`** or the CEDAR UI.
 
-### Step 2 — Infer the Canopy *Study* metadata
-Automatically infer metadata for the shared **Canopy Study** template from the user's PDFs and datasets.
-- We provide the Canopy Study template (a CEDAR template; YAML mirror included in [`templates/`](templates/)).
-- **`cedar-rest-mcp`** pulls the live template from a well-known CEDAR location.
-- **`cedar-artifact-mcp`** fills in a valid instance from the artifacts.
-
-### Step 3 — Infer the domain-specific metadata
-Automatically infer metadata for the **domain-specific template** created in Step 1.
-- Pull down the user's own template from CEDAR.
-- Use **`cedar-artifact-mcp`** to create a proper instance, inferring values from the PDFs/datasets.
+### Step 3 — Fill the domain-specific template
+Create a valid instance of the Step 2 template.
+- Pull the template back from CEDAR.
+- Infer values from the artifacts and build the instance with **`cedar-artifact-mcp`**.
 - Upload the instance to CEDAR.
 
-### Step 4 — Submit to Canopy
-Register everything in Canopy as a new study, with files attached.
-- `study-template.json` — used by Canopy in place of the current RADx template.
-- `study-metadata.json` — *Create Study* page gets a button to upload this JSON and pre-fill the study fields.
-- `domain-specific-template.json` + `domain-specific-metadata.json` — recognized, added as a new category, and rendered with the submission.
+### Step 4 — Create the study in Canopy
+Create a new study in Canopy, **bootstrapping it with the CEDAR Study instance from Step 1**, with files attached.
+- `study-metadata.json` (from Step 1) pre-fills the study fields — the *Create Study* page gets a button to upload it.
+- `domain-specific-template.json` + `domain-specific-metadata.json` (Steps 2–3) are recognized, added as a new category, and rendered with the submission.
 
 ```
-artifacts (xlsx + pdf)
+researcher's artifacts (xlsx + pdfs)   ── any input; synthetic study = example
         │
         ▼
-[Step 1] design domain template ──► CEDAR
+[Step 1] fill Canopy Study instance  ◄── pull Study template from CEDAR
+        │                                   (this instance bootstraps Step 4)
+        ▼
+[Step 2] design domain template      ──► CEDAR
         │
         ▼
-[Step 2] fill Study instance  ◄── pull Study template from CEDAR
+[Step 3] fill domain instance        ◄── pull domain template from CEDAR
         │
         ▼
-[Step 3] fill domain instance ◄── pull domain template from CEDAR
-        │
-        ▼
-[Step 4] submit study + files ──► Canopy
+[Step 4] create study in Canopy ◄── bootstrap from Step 1 instance + attach files
 ```
 
-## Deliverables
+## The deliverable
 
-The **pipeline** is the final deliverable. The **intermediate artifacts** are first-class deliverables in their own right:
+The primary deliverable is a **reusable AI artifact that drives the [4-step workflow](#workflow) generically** — give it any researcher's datasets and documents, and it produces valid CEDAR metadata and a bootstrapped Canopy study. Deciding its form is the first task of the CoFest:
 
-- A runnable AI pipeline (Claude / Codex-driven) wiring the CEDAR MCP servers together across Steps 1–4.
-- A **domain-specific CEDAR template** (≈20-field flat template, ontology-controlled) — see [`templates/`](templates/).
-- A filled **Canopy Study instance** and a filled **domain-specific instance** (JSON-LD).
-- **Synthetic sample data** so the pipeline is reproducible without real/sensitive data — see [`data/`](data/).
-- Documentation: this README + step-by-step run notes in [`docs/`](docs/).
+| Form | Fit | Notes |
+|---|---|---|
+| **Claude Skill** | Strong candidate | Packages the workflow as instructions + scripts that invoke the CEDAR MCP servers; installable and shareable; runs the same steps every time. |
+| **Claude Project** | Strong candidate | Bundles the system prompt, the CEDAR MCP connections, and reference files (templates, examples) so a researcher just drops in their artifacts. |
+| **Claude MCP** | Probably not | The CEDAR capabilities are *already* MCP servers; wrapping them in another MCP mostly adds a layer. The deliverable should orchestrate the existing servers, not duplicate them. |
 
-## What we provide (synthetic sample data)
+Whatever the form, success is: **a researcher with no CEDAR expertise runs the artifact on their own data and gets a registered, FAIR Canopy study.** We'll prove it on the bundled example.
 
-So contributors can run the pipeline immediately, this repo ships a small **synthetic study** under [`data/synthetic-study/`](data/synthetic-study/):
+Supporting deliverables produced along the way (first-class outputs in their own right):
 
-- A **dataset spreadsheet** (`.xlsx`) of subject-level measurements.
-- A **data dictionary** describing each column.
+- A filled **Canopy Study instance** (Step 1) and a **domain-specific template + filled instance** (Steps 2–3), as CEDAR JSON-LD — generated from the example study.
+- Documentation: this README + the step-by-step [`docs/RUNBOOK.md`](docs/RUNBOOK.md).
+
+## What we provide (example input data)
+
+The bundled **synthetic study** is just an *example input* so contributors can build and test the artifact immediately — the deliverable must generalize beyond it. Under [`data/synthetic-study/`](data/synthetic-study/):
+
+- A **dataset spreadsheet** (`.xlsx`) of subject-level measurements + a **data dictionary** sheet.
 - A **protocol / methods PDF**.
 - A **standard operating procedure (SOP)**.
 
@@ -128,7 +127,7 @@ canopy-metadata-cofest-2026/
 ├── data/
 │   └── synthetic-study/       ← AI-generated sample study (spreadsheet, dictionary, protocol, SOP)
 ├── templates/                 ← Canopy Study template + domain-specific template (CEDAR + YAML mirrors)
-├── src/                       ← pipeline code (parsing, LLM extraction, JSON-LD generation, validation)
+├── src/                       ← the deliverable (Skill/Project) + helper scripts; data generator lives here too
 ├── docs/                      ← step-by-step run notes, contributor guide
 └── images/                    ← diagrams / screenshots
 ```
@@ -142,8 +141,8 @@ canopy-metadata-cofest-2026/
    - BioPortal (for `bioportal-term-mcp`): <https://bioportal.bioontology.org/>
    Export them as environment variables (e.g. `CEDAR_API_KEY`, `BIOPORTAL_API_KEY`). **Do not commit keys.**
 2. **Install the MCP servers** — [`cedar-artifact-mcp`](https://github.com/metadatacenter/cedar-artifact-mcp) and [`bioportal-term-mcp`](https://github.com/metadatacenter/bioportal-term-mcp) (plus `cedar-rest-mcp` / `cedar-cee-mcp` as they become available), and register them with your LLM client (Claude, ChatGPT/Codex, etc.).
-3. **Grab the sample data** — everything you need is in [`data/synthetic-study/`](data/synthetic-study/).
-4. **Run the workflow** — follow [Steps 0–4](#workflow).
+3. **Grab the example data** — the synthetic study in [`data/synthetic-study/`](data/synthetic-study/) to build and test against.
+4. **Build the deliverable** and drive [Steps 1–4](#workflow); see [`docs/RUNBOOK.md`](docs/RUNBOOK.md).
 
 ## Who should join
 

@@ -10,6 +10,6 @@ Everything here is **AI-generated and entirely fictional** — no real subjects,
 | `SPbE-2026_protocol.pdf` | Study protocol: background, objectives, design, eligibility, measurements, analysis. | the **protocol / paper** |
 | `SPbE-2026_SOP_sample-collection.pdf` | SOP for blood sample collection & handling. | a supplementary **SOP** |
 
-These are the Step 0 inputs. The pipeline reads them and infers metadata for both the Canopy Study template (Step 2) and the domain-specific template (Step 3).
+These are the Step 0 inputs — **one example**; the deliverable must handle any such artifacts. The workflow reads them to fill the Canopy Study template (Step 1) and to create and fill a domain-specific template (Steps 2–3).
 
 Regenerate with `python3 ../../src/gen_data.py` (seed-fixed, reproducible).
