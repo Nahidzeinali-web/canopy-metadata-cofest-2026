@@ -1,6 +1,6 @@
 # Canopy: AI-Assisted Metadata Generation
 
-### CollaborationFest 2026 project [CoFest 2026](https://www.open-bio.org/events/bosc-2026/collaborationfest/)
+### CollaborationFest 2026 project - [CoFest 2026](https://www.open-bio.org/events/bosc-2026/collaborationfest/)
 
 Build a **reusable AI artifact** (a Claude Skill or Project) that turns any researcher's ordinary artifacts — spreadsheets, data dictionaries, protocols, papers — into draft, standards-compliant CEDAR metadata and a bootstrapped Canopy study, using a set of CEDAR Model Context Protocol (MCP) servers. The aim: register FAIR-aligned studies in minutes instead of hours, with a human still in the loop for review.
 
@@ -18,7 +18,7 @@ A natural foundation for this work is the set of **CEDAR MCP servers** we mainta
 
 ## Goals
 
-**The deliverable is a reusable AI artifact** — most likely a **Claude Skill** or a **Claude Project** (an MCP server is probably *not* the right shape, since the MCP servers already exist) — that can **drive the full 4-step workflow on its own**. The synthetic study in this repo is only an example input; the artifact must generalize to *any* researcher's datasets and documents.
+**The deliverable is a reusable AI artifact** — most likely a **Claude Skill** or a **Claude Project**  — that can **drive the full 4-step workflow on its own**. The synthetic study in this repo is only an example input; the artifact must generalize to *any* researcher's datasets and documents.
 
 ### Core goals (the 2-day focus)
 
@@ -29,8 +29,6 @@ A natural foundation for this work is the set of **CEDAR MCP servers** we mainta
 
 ### Stretch goals
 
-- A lightweight **review interface** so a curator can accept/edit suggested values before submission.
-- Add a "Pre-fill from metadata JSON" button to the Canopy *Create Study* page (supports [Step 4](#step-4--create-the-study-in-canopy)).
 - Confidence scores / provenance on each inferred field, so reviewers know what to check first.
 - Evaluate against a held-out study to measure how much manual effort the artifact actually saves.
 - Package the artifact so others can install and run it against their own data in one step.
@@ -97,7 +95,6 @@ The primary deliverable is a **reusable AI artifact that drives the [4-step work
 |---|---|---|
 | **Claude Skill** | Strong candidate | Packages the workflow as instructions + scripts that invoke the CEDAR MCP servers; installable and shareable; runs the same steps every time. |
 | **Claude Project** | Strong candidate | Bundles the system prompt, the CEDAR MCP connections, and reference files (templates, examples) so a researcher just drops in their artifacts. |
-| **Claude MCP** | Probably not | The CEDAR capabilities are *already* MCP servers; wrapping them in another MCP mostly adds a layer. The deliverable should orchestrate the existing servers, not duplicate them. |
 
 Whatever the form, success is: **a researcher with no CEDAR expertise runs the artifact on their own data and gets a registered, FAIR Canopy study.** We'll prove it on the bundled example.
 
@@ -151,7 +148,7 @@ Developers and researchers interested in open biomedical data, metadata standard
 
 | Name | Role | Affiliation |
 |---|---|---|
-| Atti L. Egyedi | Project lead / main contact | Stanford University |
+| Attila L. Egyedi | Project lead / main contact | Stanford University |
 | Martin O'Connor | Workflow & pipeline design | Stanford University |
 | Marcos Martínez Romero | Canopy / project concept | Stanford University |
 | Matthew Horridge | Canopy / senior advisor | Stanford University |
