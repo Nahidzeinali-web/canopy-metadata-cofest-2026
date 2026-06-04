@@ -4,8 +4,8 @@ Two CEDAR templates drive the pipeline. The `.yaml` files here are **readable mi
 
 | File | Role | Created/used in |
 |---|---|---|
-| `canopy-study-template.yaml` | The shared, study-level template every Canopy submission uses (RADx-derived). Pulled live from CEDAR. | Workflow Step 2 |
-| `domain-specific-template.yaml` | A ~20-field flat, ontology-controlled template describing *this* study's dataset. Authored by the contributor. | Workflow Step 1 |
+| `canopy-study-template.yaml` | The shared, study-level template every Canopy submission uses (RADx-derived). Pulled live from CEDAR, filled first. | Workflow Step 1 |
+| `domain-specific-template.yaml` | A ~20-field flat, ontology-controlled template describing *this* study's dataset. Authored by the artifact. | Workflow Steps 2–3 |
 
 Controlled fields name the ontology their values must come from (NCBITaxon, MONDO, NCIT, UBERON, EDAM, UO, …); resolve them to real term IDs with [`bioportal-term-mcp`](https://github.com/metadatacenter/bioportal-term-mcp).
 

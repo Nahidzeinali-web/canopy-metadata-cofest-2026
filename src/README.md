@@ -1,15 +1,14 @@
 # src
 
-Pipeline code. At CoFest this fills out into the Step 1–4 workflow; right now it contains the data generator.
+Home of the **deliverable** — the reusable artifact (Claude Skill or Project) that drives the [Step 1–4 workflow](../README.md#workflow) — plus any helper scripts it needs. Right now it holds the example-data generator.
 
 | File | Purpose |
 |---|---|
-| `gen_data.py` | Regenerates the synthetic study in `../data/synthetic-study/` (fixed seed → reproducible). Needs `openpyxl` and `reportlab`. |
+| `gen_data.py` | Regenerates the synthetic *example* study in `../data/synthetic-study/` (fixed seed → reproducible). Needs `openpyxl` and `reportlab`. |
 
-Planned modules (good first issues):
+The first CoFest task is choosing the artifact's form (Skill vs. Project — see the README's [Deliverable](../README.md#the-deliverable) section). Likely pieces, whatever the form:
 
-- `parse/` — deterministic file & header parsing (XLSX, CSV, data dictionaries, PDF text).
-- `extract/` — LLM-based structured extraction from artifacts.
-- `jsonld/` — assemble CEDAR-valid JSON-LD instances.
-- `validate/` — validate instances against templates via `cedar-artifact-mcp`.
-- `submit/` — push study + files to Canopy (Step 4).
+- **Instructions / prompt** that walk an LLM through Steps 1–4 against arbitrary inputs.
+- **Artifact parsing helpers** — pull text/tables/headers from XLSX, CSV, data dictionaries, and PDFs to feed the model.
+- **CEDAR MCP orchestration** — author/validate (`cedar-artifact-mcp`), term lookup (`bioportal-term-mcp`), repository push/pull (`cedar-rest-mcp`), view (`cedar-cee-mcp`).
+- **Canopy submission** — bootstrap a study from the Step 1 instance and attach files (Step 4).
