@@ -48,12 +48,12 @@ Putting it together, the **common workflow** is: a researcher has data they want
 
 The work builds **on top of** a set of [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) servers for CEDAR — you orchestrate them, you don't replace them. MCP is an open standard — think of it as a universal adapter that lets an AI assistant call external tools and data sources in a uniform way; an MCP *server* exposes a specific capability (here, a slice of CEDAR or BioPortal) as a set of callable tools. Because MCP is a shared standard, the same servers work across MCP-capable clients — Claude, ChatGPT, and others — so you can bring whatever LLM you have a license for. Each server is **self-documenting**: connect it to your client and it advertises its own tools and parameters, and each repository's README explains setup and usage in detail — start there.
 
-| MCP server | Status | What it does |
-|---|---|---|
-| [`cedar-artifact-mcp`](https://github.com/metadatacenter/cedar-artifact-mcp) | Production | Author and validate CEDAR templates and metadata instances. |
-| [`bioportal-term-mcp`](https://github.com/metadatacenter/bioportal-term-mcp) | Production | Look up ontology terms in BioPortal so values are anchored to real, standard identifiers instead of guessed free text. |
-| `cedar-rest-mcp` | In development | Interact with the CEDAR repository itself — save generated metadata, fetch existing templates, search what's already published. |
-| `cedar-cee-mcp` | In development | View/render a template (alternative to the CEDAR UI). |
+| MCP server                                                                             | Status | What it does                                                                                                                    |
+|----------------------------------------------------------------------------------------|--|---------------------------------------------------------------------------------------------------------------------------------|
+| [`cedar-artifact-mcp`](https://github.com/metadatacenter/cedar-artifact-mcp)           | Production | Author and validate CEDAR templates and metadata instances.                                                                     |
+| [`bioportal-term-mcp`](https://github.com/metadatacenter/bioportal-term-mcp)           | Production | Look up ontology terms in BioPortal so values are anchored to real, standard identifiers instead of guessed free text.          |
+| [`cedar-artifact-rest-mcp`](https://github.com/metadatacenter/cedar-artifact-rest-mcp) | Production | Interact with the CEDAR repository itself — save generated metadata, fetch existing templates, search what's already published. |
+| [`cedar-cee-mcp`](https://github.com/metadatacenter/cedar-cee-mcp)                     | Production | View/render a template or an instance (alternative to the CEDAR UI).                                                            |
 
 Links to all four live in [Links](#links) — some are published and some are landing shortly. Treat each repo's own docs as the source of truth for how to run it.
 
