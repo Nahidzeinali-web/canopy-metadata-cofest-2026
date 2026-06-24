@@ -98,17 +98,7 @@ The workflow has two halves: first **describe** the study with CEDAR (Steps 1–
 ### Step 4 — Create the Study in Canopy
 *What:* register a new study in Canopy, **bootstrapping it from the Step 1 Study instance**, and attach the files. *Why:* this is where description becomes a real, shareable record — the point of the whole exercise. Instead of re-keying everything into the Canopy *Create Study* form, the Step 1 metadata pre-fills it.
 - `study-metadata.json` (from Step 1) pre-fills the study fields — the *Create Study* page gets a button to upload it.
-- The submission then follows Canopy's normal [Submission Workflow](#submission-workflow), where you also set the study's access level (who can see it: everyone, any logged-in user, or just you).
-
-## Submission Workflow
-
-Step 4 lands in Canopy's standard submission flow, so it helps to know how that works. Full walkthrough: [Canopy tutorial → Submission Workflow](https://canopy.stanford.edu/tutorial?tutorial=submissionWorkflow).
-
-Getting data onto the platform involves two roles: a **Data Submitter**, who registers a study and uploads its files, and a **Data Curator**, who reviews the submission and approves or rejects it. A submission is only published after a curator reviews it — the author and the reviewer are deliberately different people. (An **Application Administrator** grants roles and manages the system.)
-
-A study must exist before any files can be uploaded, so the flow is: **register the study** (and set its access level) → **create a submission and upload files** → **bundle** related files (a data file with its metadata and data dictionary) → **validate** (Canopy checks each bundle against the required metadata template and data-dictionary spec) → **review and submit**. The package is then read-only while the curator approves or rejects files (with a reason); on approval it's published per the study's access level, and both sides are notified by email. A completed submission isn't edited in place — to update data you start a new submission, and re-uploading a same-named file creates a new version, preserving history.
-
-This matters for the project: the metadata our workflow produces is exactly what Canopy validates at the **validate** step, so well-formed CEDAR instances are what make a submission pass cleanly.
+- Creating a study in Canopy needs the **Data Submitter** role, which isn't granted by default — request it from a Canopy administrator ahead of time. During registration you also set the study's access level (who can see it).
 
 ## The Deliverable
 
