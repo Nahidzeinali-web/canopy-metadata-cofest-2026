@@ -11,8 +11,6 @@ Everything here is **AI-generated and entirely fictional** — no real subjects,
 | `SPbE-2026_protocol.pdf` | ~10-page study protocol: synopsis, background, objectives, design, eligibility, procedures, measurements, analysis, governance, glossary, and a data-dictionary appendix. | the **protocol / paper** |
 | `SPbE-2026_SOP_sample-collection.pdf` | SOP for blood sample collection & handling. | a supplementary **SOP** |
 
-The 20 columns deliberately span varied CEDAR field types — numeric, date, boolean, ontology-controlled (`sex`, `country`, `condition`, `study_arm`), and external identifiers (`investigator_orcid`, `reference_pmid`, `protocol_doi`) — so the example exercises real metadata, not 20 strings. See the structure table in the [main README](../../README.md#what-we-provide-example-input-data).
+The 20 columns deliberately span varied CEDAR field types — numeric, date, boolean, ontology-controlled (`sex`, `country`, `condition`, `study_arm`), and external identifiers (`investigator_orcid`, `reference_pmid`, `protocol_doi`) — so the example exercises real metadata, not 20 strings. See the structure table in the [main README](../../README.md#the-example-study-we-provide).
 
 These are the Step 0 inputs — **one example**; the approach must handle any such artifacts. The workflow reads them to fill the Canopy Study template (Step 1) and to create and fill a domain-specific template (Steps 2–3).
-
-Regenerate with `python3 ../../src/gen_data.py` (seed-fixed, reproducible).
