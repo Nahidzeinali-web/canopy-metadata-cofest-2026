@@ -41,10 +41,10 @@ What to do, start to finish. **Requirements** are things you need *before* you b
 - [ ] Able to create free accounts at [CEDAR](https://cedar.metadatacenter.org/) and [BioPortal](https://bioportal.bioontology.org/)
 - [ ] A machine that can run **Java 17+** and **`uv`**
 
-### ① Initial Configuration — Set Up Once ([Details](#getting-started))
+### ① Initial Configuration — Set Up Once ([Details](docs/INSTALL_MCPS.md))
 
 - [ ] Create your [CEDAR](https://cedar.metadatacenter.org/) and [BioPortal](https://bioportal.bioontology.org/) API keys
-- [ ] Install **Java 17+** and **`uv`** — see [Prerequisites](#prerequisites-and-dependencies)
+- [ ] Install **Java 17+** and **`uv`**
 - [ ] [Install the CEDAR MCP servers](docs/INSTALL_MCPS.md) and connect them to your LLM client
 
 ### ② Tasks
@@ -70,7 +70,7 @@ To work with CEDAR (and BioPortal) from an LLM, we use a set of handy **MCP serv
 
 All four are public — see [Links](#links). You don't install them by hand: a script downloads prebuilt servers and generates your client config ([docs/INSTALL_MCPS.md](docs/INSTALL_MCPS.md)). The one runtime note worth knowing: **only `bioportal-term-mcp` runs on Python (`uv`)** — the other three are **Java**.
 
-> **API keys:** Working against live CEDAR and BioPortal requires free accounts and API keys. See [Getting Started](#getting-started). Never commit keys — `.gitignore` already excludes the usual files.
+> **API keys:** Working against live CEDAR and BioPortal requires free accounts and API keys — the [install guide](docs/INSTALL_MCPS.md) walks you through getting them. Never commit keys; `.gitignore` already excludes the usual files.
 
 ## Workflow
 
@@ -137,54 +137,6 @@ The dataset columns deliberately span varied CEDAR field types — numeric, date
 | `protocol_doi` | identifier | DOI |
 
 These are AI-generated and entirely fictional — no real subjects or results. Regenerate with `python3 src/gen_data.py`.
-
-## Repository Structure
-
-```
-canopy-metadata-cofest-2026/
-├── README.md                  ← this proposal
-├── LICENSE                    ← GPL-3.0
-├── .gitignore
-├── data/
-│   └── synthetic-study/       ← example study: dataset (xlsx + csv), dictionary, 10-pg protocol, SOP
-├── templates/                 ← the provided Canopy Study template (the domain template is yours to design)
-├── src/                       ← prompts/strategies, helper scripts, optional Skill; data generator lives here
-├── docs/                      ← runbook + (to come) the prompts and lessons-learned writeup
-└── images/                    ← diagrams / screenshots
-```
-
-## Getting Started
-
-> Detailed, step-by-step instructions live in [`docs/RUNBOOK.md`](docs/RUNBOOK.md). Work through the setup below in order; it maps to **① Initial configuration** in the [Project checklist](#project-checklist).
-
-### Prerequisites and Dependencies
-
-The CEDAR MCP servers run locally, so you need their toolchains installed before you can connect them:
-
-- **Java 17+** — runs the three Java servers.
-- **[`uv`](https://docs.astral.sh/uv/)** — runs the one Python server (`bioportal-term-mcp`) and the install script.
-- **An LLM client with MCP/tool support** — Claude, ChatGPT, Gemini, etc. **Bring your own license; we don't provide one.**
-- **Two free API keys** — BioPortal and CEDAR (the install guide walks you through getting them).
-
-There's nothing to build or compile — an install script downloads the prebuilt servers. Full steps are in **[docs/INSTALL_MCPS.md](docs/INSTALL_MCPS.md)**.
-
-> Each server's repo lists its exact requirements — treat those as the source of truth. If you'd rather not install by hand, your LLM/AI assistant can often install Java and `uv` and wire up the servers for you; just ask it to.
-
-### Accounts & API Keys
-
-Create free accounts and generate API keys, then export them as environment variables (`CEDAR_API_KEY`, `BIOPORTAL_API_KEY`). **Never commit keys** — `.gitignore` already excludes the usual files.
-
-- CEDAR: <https://cedar.metadatacenter.org/>
-- BioPortal (for `bioportal-term-mcp`): <https://bioportal.bioontology.org/>
-
-### Installing the MCP Servers
-
-Follow **[docs/INSTALL_MCPS.md](docs/INSTALL_MCPS.md)** — a three-step guide (get API keys → run the download script → paste the config into your client). It covers Claude Desktop, Claude Code, Cursor, Windsurf, and Cline. There's nothing to build; when you're done, ask your LLM to "ping all four MCP servers" to confirm they're connected.
-
-### Run
-
-1. **Grab the example data** — the synthetic study in [`data/synthetic-study/`](data/synthetic-study/).
-2. **Drive [Steps 1–4](#workflow)** with your LLM (see [`docs/RUNBOOK.md`](docs/RUNBOOK.md)), and **capture the prompts and lessons learned** as you go — that's the deliverable.
 
 ## Who Should Join
 
