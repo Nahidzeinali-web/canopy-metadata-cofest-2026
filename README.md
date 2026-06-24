@@ -138,6 +138,14 @@ The dataset columns deliberately span varied CEDAR field types — numeric, date
 
 These are AI-generated and entirely fictional — no real subjects or results. Regenerate with `python3 src/gen_data.py`.
 
+## Get Going
+
+That's the whole picture: the tools are ready and the example is in your hands. Set up via the [Project Checklist](#project-checklist), then take the [example study](#the-example-study-we-provide) through the [workflow](#workflow) and capture what worked — exactly as described above. That writeup is the [deliverable](#the-deliverable).
+
+Don't chase a perfect pipeline. Chase a run you can **repeat and explain**: if someone else can take your prompts and go from raw files to a registered, FAIR study, you've nailed it.
+
+Got it working with time to spare? Point it at **your own data** and see how far it generalizes.
+
 ## Team
 
 | Name | Role | Affiliation |
