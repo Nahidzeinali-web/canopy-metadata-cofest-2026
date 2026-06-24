@@ -1,5 +1,5 @@
 type: template
-name: Canopy Study Metadata Specification
+name: Canopy Study Metadata Specification v3
 modelVersion: 1.6.0
 version: 0.0.1
 status: draft
@@ -22,7 +22,7 @@ children:
   - key: center
     type: text-field
     name: Center
-  - key: accessLevel
+  - key: access_level
     type: radio-field
     name: Access Level
     values:
@@ -79,7 +79,7 @@ children:
     configuration:
       required: true
       multiple: true
-  - key: FOA_number
+  - key: foa_number
     type: text-field
     name: FOA Number
     configuration:
@@ -91,14 +91,14 @@ children:
     configuration:
       required: true
       multiple: true
-  - key: studystartdate
+  - key: study_start_date
     type: temporal-field
     name: Study Start Date
     datatype: xsd:date
     granularity: day
     configuration:
       required: true
-  - key: studyenddate
+  - key: study_end_date
     type: temporal-field
     name: Study End Date
     datatype: xsd:date
@@ -170,13 +170,13 @@ children:
     configuration:
       required: true
       multiple: true
-  - key: CT_URL
+  - key: ct_url
     type: link-field
     name: Clinical Trials.gov URL
-  - key: study_website_URL
+  - key: study_website_url
     type: link-field
     name: Study Website URL
-  - key: publication_URL
+  - key: publication_url
     type: link-field
     name: Primary Publication URL
     configuration:
@@ -231,7 +231,7 @@ children:
     name: Genomic Array Data Types
     configuration:
       multiple: true
-  - key: acknowledgement_statement
+  - key: acknowledgment_statement
     type: text-area-field
     name: Acknowledgment Statement
     configuration:
