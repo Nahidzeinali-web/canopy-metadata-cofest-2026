@@ -76,6 +76,8 @@ All four are public — see [Links](#links). You don't install them by hand: a s
 
 The workflow has two halves: first **describe** the study with CEDAR (Steps 1–3), then **submit** it to Canopy (Step 4). Steps 1–3 each produce a CEDAR artifact; Step 4 turns those into a live study. The whole thing runs over the [MCP servers](#mcp-servers), driven by an LLM.
 
+![The four-step workflow: fill the Canopy Study template, design a domain template, fill the domain template, create the study in Canopy.](images/workflow.svg)
+
 **Input (Step 0):** the researcher's artifacts — datasets (XLSX/CSV, relational exports) and documents (papers, protocol, grant, SOP, supplementary PDFs). The bundled synthetic study is one example; the approach must work for any.
 
 ### Step 1 — Fill out the existing Canopy Study template
@@ -97,21 +99,6 @@ The workflow has two halves: first **describe** the study with CEDAR (Steps 1–
 *What:* register a new study in Canopy, **bootstrapping it from the Step 1 Study instance**, and attach the files. *Why:* this is where description becomes a real, shareable record — the point of the whole exercise. Instead of re-keying everything into the Canopy *Create Study* form, the Step 1 metadata pre-fills it.
 - `study-metadata.json` (from Step 1) pre-fills the study fields — the *Create Study* page gets a button to upload it.
 - The submission then follows Canopy's normal [Submission Workflow](#submission-workflow), and what others can see is governed by [Access Control](#access-control).
-
-```mermaid
-flowchart LR
-    A["Researcher's artifacts<br/>(xlsx + PDFs)"] -->|any input — synthetic study is the example| S1["Step 1<br/>Fill Canopy Study instance"]
-    S1 --> S2["Step 2<br/>Design domain template"]
-    S2 --> S3["Step 3<br/>Fill domain instance"]
-    S3 --> S4["Step 4<br/>Create study in Canopy"]
-
-    CEDAR[("CEDAR")] -. pull Study template .-> S1
-    S2 -. save template .-> CEDAR
-    CEDAR -. pull domain template .-> S3
-
-    S1 -. instance bootstraps Step 4 .-> S4
-    S4 -->|attach files| Canopy[("Canopy")]
-```
 
 ## Submission Workflow
 

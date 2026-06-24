@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="2" width="996" height="146" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+
+  <!-- Step boxes -->
+  <g>
+    <rect x="24"  y="32" width="210" height="86" rx="10" fill="#1F6F54"/>
+    <rect x="268" y="32" width="210" height="86" rx="10" fill="#1F6F54"/>
+    <rect x="512" y="32" width="210" height="86" rx="10" fill="#1F6F54"/>
+    <rect x="756" y="32" width="210" height="86" rx="10" fill="#1F6F54"/>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#57606a" stroke-width="2.5" marker-end="url(#arrow)">
+    <line x1="238" y1="75" x2="262" y2="75"/>
+    <line x1="482" y1="75" x2="506" y2="75"/>
+    <line x1="726" y1="75" x2="750" y2="75"/>
+  </g>
+
+  <!-- Labels -->
+  <g fill="#ffffff" text-anchor="middle">
+    <text x="129" y="63" font-size="17" font-weight="700">Step 1</text>
+    <text x="129" y="84" font-size="12.5" fill="#e6f1ec">Fill the Canopy</text>
+    <text x="129" y="100" font-size="12.5" fill="#e6f1ec">Study template</text>
+
+    <text x="373" y="63" font-size="17" font-weight="700">Step 2</text>
+    <text x="373" y="84" font-size="12.5" fill="#e6f1ec">Design a</text>
+    <text x="373" y="100" font-size="12.5" fill="#e6f1ec">domain template</text>
+
+    <text x="617" y="63" font-size="17" font-weight="700">Step 3</text>
+    <text x="617" y="84" font-size="12.5" fill="#e6f1ec">Fill the</text>
+    <text x="617" y="100" font-size="12.5" fill="#e6f1ec">domain template</text>
+
+    <text x="861" y="63" font-size="17" font-weight="700">Step 4</text>
+    <text x="861" y="84" font-size="12.5" fill="#e6f1ec">Create the study</text>
+    <text x="861" y="100" font-size="12.5" fill="#e6f1ec">in Canopy</text>
+  </g>
+</svg>
