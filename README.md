@@ -31,18 +31,11 @@ The point of the CoFest is **developing and understanding** how to drive metadat
 3. **Write up lessons learned** — a short document distilling what works, what doesn't, and recommendations for doing this reliably and generically.
 4. **Prove it on the example.** Run your approach against the bundled [synthetic study](#what-we-provide-example-input-data) and show the four steps complete end-to-end.
 
-### Extensions / stretch goals
-
-- **Package it as a reusable [Claude Skill](#the-deliverable)** that submits the data and creates the study, so others can run it in one step.
-- Confidence scores / provenance on each inferred field, so reviewers know what to check first.
-- Evaluate against a held-out study to measure how much manual effort the approach actually saves.
-- Try the same prompts across different LLMs (Claude, ChatGPT, Gemini) and compare.
-
 ---
 
 ## Project checklist
 
-What to do, start to finish. **Requirements** are things you need *before* you begin; **Initial configuration** is the one-time setup; then the **core tasks**, with **optional extensions** if you have time.
+What to do, start to finish. **Requirements** are things you need *before* you begin; **Initial configuration** is the one-time setup; then the **core tasks**.
 
 ### Requirements — check before you start
 
@@ -63,12 +56,6 @@ What to do, start to finish. **Requirements** are things you need *before* you b
 - [ ] [Step 3](#step-3--fill-the-domain-specific-template) — fill it (a valid instance)
 - [ ] [Step 4](#step-4--create-the-study-in-canopy) — create the study in Canopy
 - [ ] **Capture your prompts** and **write up lessons learned** — the [primary deliverable](#the-deliverable)
-
-### ③ Optional extensions
-
-- [ ] Package the workflow as a reusable **Claude Skill** that submits data + creates the study
-- [ ] Run the same prompts across different LLMs and compare
-- [ ] Add confidence / provenance to inferred fields, or evaluate on a held-out study
 
 ## MCP Servers (the foundation)
 
@@ -160,8 +147,6 @@ The **primary deliverable is knowledge, captured as artifacts you can reuse** �
 3. **The worked example** — the filled Canopy Study instance (Step 1) and the domain-specific template + instance (Steps 2–3), as CEDAR JSON-LD, produced from the bundled study, plus a registered study in Canopy.
 
 **Prerequisite — bring your own LLM.** You need access to an LLM with tool/MCP support (Claude, ChatGPT, Gemini, …); we don't provide a license. Because the MCP servers are an open standard, the same prompts and servers should work across clients — comparing them is a welcome bonus.
-
-**Extension — a Claude Skill.** Teams who get the workflow running smoothly can package it as a reusable [Claude Skill](https://modelcontextprotocol.io/) that creates the study and submits the data in one step. That turns the prompts-and-strategies knowledge into something installable. It's the natural "next step," not the day-one goal.
 
 Success looks like: **someone who isn't a CEDAR expert can follow your prompts and lessons-learned on their own data and end up with a registered, FAIR Canopy study.**
 
