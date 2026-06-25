@@ -110,13 +110,9 @@ These are AI-generated and entirely fictional — no real subjects or results.
 
 ## Get Going
 
-> [!IMPORTANT]
-> **Start here — set up before you do anything else:**
 > 1. **🍴 Fork this repo, then clone your fork** to your machine.
 > 2. **📂 Work in the [`work/`](work/) folder.** Keep everything you produce there.
-> 3. **⚙️ Install the tools and servers** — open the **👉 [setup guide](INSTALL.md)** and follow it top to bottom: prerequisites (Java + uv), your two API keys, and the four MCP servers. You can't run the workflow until all four servers are connected to your LLM client.
->
-> Once all four servers are connected, you're ready to work.
+> 3. **⚙️ Install the tools and servers** — open the **👉 [setup guide](INSTALL.md)** and follow it.
 
 That's the whole picture: the tools are ready and the example is in your hands. Take the example study through the workflow and capture what worked — exactly as described above. That writeup is the deliverable.
 
