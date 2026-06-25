@@ -2,7 +2,7 @@
 
 ### CollaborationFest 2026 Project - [CoFest 2026](https://www.open-bio.org/events/bosc-2026/collaborationfest/)
 
-A CollaborationFest 2026 project on **describing research data with AI**. Using an LLM together with our CEDAR tools, you turn ordinary research files — spreadsheets, protocols, papers — into standards-compliant metadata and a registered Canopy study, with a person reviewing along the way.
+A CollaborationFest 2026 project on **describing research data with AI**. Using an LLM together with our CEDAR tools, you turn ordinary research files — spreadsheets, protocols, papers — into standards-compliant metadata and a registered Canopy study.
 
 ---
 
@@ -52,7 +52,7 @@ The workflow is four steps: fill the Canopy Study template (Step 1), design a do
 
 ### Step 1 — Fill Out the Existing Canopy Study Template
 *What:* produce a filled **Canopy Study** instance from the artifacts. *Why:* every Canopy submission is built around a study, and Canopy provides a single generic study-metadata template (title, investigators, design, dates, …) that every study must populate. Filling it is the unavoidable first step, and an LLM can draft most of it by reading the protocol and dataset rather than the researcher typing it by hand. This instance also **bootstraps the study in Step 4**, so it's worth getting right first.
-- The Canopy Study template is an existing CEDAR template — pull it live from CEDAR with **`cedar-artifact-rest-mcp`** using its template ID:
+- The Canopy Study template is an existing CEDAR template — pull it live from CEDAR with **`cedar-artifact-rest-mcp`** using its template id:
 
   ```
   https://repo.metadatacenter.org/templates/aff00b59-0bb7-4e40-9437-3216e5fb0ff7
