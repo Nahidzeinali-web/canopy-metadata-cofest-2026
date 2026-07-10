@@ -4,7 +4,7 @@
 
 Fork it so you have your own copy to commit your work to, then clone that fork to your machine.
 
-Option A — GitHub CLI: forks and clones in one step
+**Option A** — GitHub CLI: forks and clones in one step
 
 1. Ensure you have the GitHub CLI installed
 2. Execute the instructions below in a terminal.
@@ -13,7 +13,7 @@ gh repo fork canopy-datahub/canopy-metadata-cofest-2026 --clone
 cd canopy-metadata-cofest-2026
 ```
 
-Option B — plain git: click "Fork" on GitHub first, then clone YOUR fork
+**Option B** — plain git: click "Fork" on GitHub first, then clone YOUR fork
 
 1. Go to the GitHub Repo Page: [https://github.com/canopy-datahub/canopy-metadata-cofest-2026](https://github.com/canopy-datahub/canopy-metadata-cofest-2026)
 2. Click "Fork" in the top right corner of the page and follow prompts
