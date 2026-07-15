@@ -8,8 +8,7 @@ In Canopy, researchers organize and share data as **studies**, each consisting o
 
 Creating high-quality metadata is still largely a manual process. Researchers often extract information from datasets, data dictionaries, protocols, and publications, then translate it into structured metadata. This project explores AI-assisted approaches for automating parts of that process while maintaining high-quality metadata that can be used in Canopy. As a bonus part, we will also explore how this metadata can be used to populate and register studies in Canopy.
 
-### Project Goals
----
+## Project Goals
 
 The goal of this CoFest project is to explore reusable AI-assisted workflows for metadata generation.
 
@@ -24,13 +23,11 @@ Possible directions include:
 
 Before diving into the project, we'll first set up the development environment and complete a short tutorial covering the core concepts used throughout the rest of the project.
 
-### Environment Setup
----
+## Environment Setup
 
 Before jumping into the tutorial and project, please complete the environment setup by following the instructions on [this page](https://github.com/canopy-datahub/canopy-metadata-cofest-2026/blob/main/INSTALL.md). Once everything is set up, come back here to continue.
 
-### Tutorial
----
+## Tutorial
 
 Before starting the project, complete this short tutorial to verify that your environment is working correctly and to become familiar with the core concepts.
 
@@ -107,7 +104,7 @@ Examples of useful deliverables include:
 
 > 1. **🍴 Fork this repo, then clone your fork** to your machine.
 > 2. **📂 Work in the `work/` folder.** Keep everything you produce there.
-> 3. **⚙️ Install the tools and servers** — open the **👉 [setup guide](INSTALL.md)** and follow it.
+> 3. **⚙️ If you followed the turorial tools and servers should already be installed but if not:** — open the **👉 [setup guide](INSTALL.md)** and follow it.
 
 ## Team
 
