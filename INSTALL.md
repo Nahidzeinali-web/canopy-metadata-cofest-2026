@@ -58,9 +58,8 @@ uv --version
 Two of the servers need a free API key. Grab both now — you'll pass them to the script in step 4 (or
 it'll prompt you for them):
 
-- **BioPortal** (used by `bioportal-term-mcp`) — sign in, or create a free account, at
-  [bioportal.bioontology.org/account](https://bioportal.bioontology.org/account); your key is shown
-  right on that page.
+- **BioPortal** (used by `bioportal-term-mcp`) — sign in, or create an account, at
+  [BioPortal](https://bioportal.bioontology.org/accounts/new). After logging in, your API key will be available on the Account Settings page, which you can access by clicking your username in the top-right menu.
 - **CEDAR** (used by `cedar-artifact-rest-mcp`) — sign in, or create a free account, at
   [cedar.metadatacenter.org](https://cedar.metadatacenter.org). Once logged in, click the person
   icon in the top-right corner to open your profile, where your API key is shown. CEDAR may display
