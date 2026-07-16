@@ -27,6 +27,9 @@ Participants are encouraged to explore ideas such as:
 
 Before diving into the project, we'll first set up the development environment and complete a short tutorial covering the core concepts used throughout the rest of the project.
 
+## Prerequisite — bring your own LLM
+You need access to an LLM with tool/MCP support (Claude, ChatGPT, Gemini, …); we don't provide a license. Because the MCP servers are an open standard, the same prompts and servers should work across clients.
+
 ## Environment Setup
 
 Before jumping into the tutorial and project, please complete the environment setup by following the instructions on [this page](./INSTALL.md). Once everything is set up, come back here to continue.
@@ -61,9 +64,10 @@ Create a simple **publication metadata template** using the MCPs you just config
 
 Once your template is complete:
 
-1. Find a journal article and use an LLM to generate a metadata instance for your template.
-2. Open the generated instance using **CEE-MCP** to verify that it renders correctly.
-3. Use the appropriate MCPs to upload both the template and the instance to CEDAR.
+1. Visaulize the template using **CEE-MCP**.
+2. Find a journal article and use an LLM to generate a metadata instance for your template.
+3. Open the generated instance using **CEE-MCP** to verify that it renders correctly.
+4. Use the appropriate MCPs to upload both the template and the instance to CEDAR.
 
 ## Project Tasks and Example Workflow
 
@@ -112,31 +116,30 @@ Examples of useful deliverables include:
 
 ## Team
 
-| Name | Role | Affiliation |
-|---|---|---|
-| Attila L. Egyedi | Project lead / main contact | Stanford University |
-| Martin O'Connor | Workflow & pipeline design | Stanford University |
-| Marcos Martínez Romero | Canopy / project concept | Stanford University |
-| Matthew Horridge | Canopy / senior advisor | Stanford University |
-| Mete Akdogan | Canopy / senior advisor | Stanford University |
+| Name                   | Role             | Affiliation         |
+|------------------------|------------------|---------------------|
+| Attila L. Egyedi       | Project Lead     | Stanford University |
+| Mete Akdogan           | Project Lead     | Stanford University |
+| Marcos Martínez Romero | Project Support  | Stanford University |
+| Matthew Horridge       | Project Support  | Stanford University |
 
 ## Links
 
-| Resource | Link |
-|---|---|
-| Canopy (code) | <https://github.com/canopy-datahub> |
-| Canopy (production) | <https://canopy.stanford.edu/> |
+| Resource                              | Link                                                               |
+|---------------------------------------|--------------------------------------------------------------------| 
+| Canopy (code)                         | <https://github.com/canopy-datahub>                                |
+| Canopy (production)                   | <https://canopy.stanford.edu/>                                     |
 | Canopy tutorial — Submission Workflow | <https://canopy.stanford.edu/tutorial?tutorial=submissionWorkflow> |
-| Canopy tutorial — Data Access Control | <https://canopy.stanford.edu/tutorial?tutorial=dataAccessControl> |
-| NIH RADx Data Hub (paper) | <https://publichealth.jmir.org/2025/1/e72677/> |
-| NIH RADx Data Hub (website) | <https://radxdatahub.nih.gov/> |
-| CEDAR Workbench | <https://cedar.metadatacenter.org/> |
-| Model Context Protocol | <https://modelcontextprotocol.io/> |
-| MCP install guide | [INSTALL.md](INSTALL.md) |
-| CEDAR Artifact MCP (Java) | <https://github.com/metadatacenter/cedar-artifact-mcp> |
-| BioPortal Term MCP (Python / `uv`) | <https://github.com/metadatacenter/bioportal-term-mcp> |
-| CEDAR Artifact REST MCP (Java) | <https://github.com/metadatacenter/cedar-artifact-rest-mcp> |
-| CEDAR CEE MCP (Java) | <https://github.com/metadatacenter/cedar-cee-mcp> |
+| Canopy tutorial — Data Access Control | <https://canopy.stanford.edu/tutorial?tutorial=dataAccessControl>  |
+| NIH RADx Data Hub (paper)             | <https://publichealth.jmir.org/2025/1/e72677/>                     |
+| NIH RADx Data Hub (website)           | <https://radxdatahub.nih.gov/>                                     |
+| CEDAR Workbench                       | <https://cedar.metadatacenter.org/>                                |
+| Model Context Protocol                | <https://modelcontextprotocol.io/>                                 |
+| Install guide                         | [INSTALL.md](INSTALL.md)                                           |
+| CEDAR Artifact MCP (Java)             | <https://github.com/metadatacenter/cedar-artifact-mcp>             |
+| BioPortal Term MCP (Python / `uv`)    | <https://github.com/metadatacenter/bioportal-term-mcp>             |
+| CEDAR Artifact REST MCP (Java)        | <https://github.com/metadatacenter/cedar-artifact-rest-mcp>        |
+| CEDAR CEE MCP (Java)                  | <https://github.com/metadatacenter/cedar-cee-mcp>                  |
 
 ## License
 
