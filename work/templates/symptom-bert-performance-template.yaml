@@ -1,10 +1,14 @@
 type: template
 name: Symptom-BERT Model Performance Metadata Template
 description: "Domain-specific metadata template describing the datasets, base model, and per-symptom performance of the Symptom-BERT cancer symptom detection model (Zeinali et al., J Pain Symptom Manage 2024;68:190-198)."
-id: https://repo.metadatacenter.org/templates/513ddf68-edf3-4971-819b-2625e52eade6
+id: https://repo.metadatacenter.org/templates/3eafcf00-3193-4d0e-85bd-d05eb19b27d2
 status: draft
 version: 0.0.1
 modelVersion: 1.6.0
+createdOn: 2026-07-17T12:53:14-07:00
+createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+modifiedOn: 2026-07-17T12:53:14-07:00
+modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
 children:
   - key: Model Name
     type: text-field
@@ -14,6 +18,10 @@ children:
     status: draft
     version: 0.0.1
     modelVersion: 1.6.0
+    createdOn: 2026-07-17T12:53:14-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T12:53:14-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Model+Name
@@ -25,6 +33,10 @@ children:
     status: draft
     version: 0.0.1
     modelVersion: 1.6.0
+    createdOn: 2026-07-17T12:53:14-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T12:53:14-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Base+Pretrained+Model
@@ -38,6 +50,10 @@ children:
     modelVersion: 1.6.0
     datatype: xsd:int
     unit: notes
+    createdOn: 2026-07-17T12:53:14-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T12:53:14-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Unlabeled+Pretraining+Corpus+Size
@@ -51,6 +67,10 @@ children:
     modelVersion: 1.6.0
     datatype: xsd:int
     unit: notes
+    createdOn: 2026-07-17T12:53:14-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T12:53:14-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Gold-Standard+Corpus+Size
@@ -64,6 +84,10 @@ children:
     modelVersion: 1.6.0
     datatype: xsd:int
     unit: notes
+    createdOn: 2026-07-17T12:53:14-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T12:53:14-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/External+Validation+Corpus+Size
@@ -75,6 +99,10 @@ children:
     status: draft
     version: 0.0.1
     modelVersion: 1.6.0
+    createdOn: 2026-07-17T12:53:14-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T12:53:14-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       propertyIri: https://schema.metadatacenter.org/properties/Code+Repository+URL
   - key: Symptom Performance
@@ -85,6 +113,10 @@ children:
     status: draft
     version: 0.0.1
     modelVersion: 1.6.0
+    createdOn: 2026-07-17T12:53:14-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T12:53:14-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     children:
       - key: Symptom
         type: controlled-term-field

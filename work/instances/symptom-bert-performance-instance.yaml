@@ -1,8 +1,12 @@
 type: instance
 name: Symptom-BERT Performance Metadata
 description: "Domain-specific metadata template describing the datasets, base model, and per-symptom performance of the Symptom-BERT cancer symptom detection model (Zeinali et al., J Pain Symptom Manage 2024;68:190-198)."
-id: https://repo.metadatacenter.org/template-instances/b402b846-37d9-4ec2-b64b-8be196c05171
-isBasedOn: https://repo.metadatacenter.org/templates/513ddf68-edf3-4971-819b-2625e52eade6
+id: https://repo.metadatacenter.org/template-instances/59aac186-3716-4714-991d-fd70e3c88802
+isBasedOn: https://repo.metadatacenter.org/templates/3eafcf00-3193-4d0e-85bd-d05eb19b27d2
+createdOn: 2026-07-17T12:53:57-07:00
+createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+modifiedOn: 2026-07-17T12:53:57-07:00
+modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
 children:
   Model Name:
     value: Symptom-BERT
