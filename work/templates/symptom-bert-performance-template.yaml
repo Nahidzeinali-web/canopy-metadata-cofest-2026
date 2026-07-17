@@ -1,0 +1,193 @@
+type: template
+name: Symptom-BERT Model Performance Metadata Template
+description: "Domain-specific metadata template describing the datasets, base model, and per-symptom performance of the Symptom-BERT cancer symptom detection model (Zeinali et al., J Pain Symptom Manage 2024;68:190-198)."
+id: https://repo.metadatacenter.org/templates/513ddf68-edf3-4971-819b-2625e52eade6
+status: draft
+version: 0.0.1
+modelVersion: 1.6.0
+children:
+  - key: Model Name
+    type: text-field
+    name: Model Name
+    description: Name of the fine-tuned model.
+    id: https://repo.metadatacenter.org/template-fields/f8eeb2ec-e7e0-4fc6-9576-8ea8bbdfc1aa
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Model+Name
+  - key: Base Pretrained Model
+    type: text-field
+    name: Base Pretrained Model
+    description: Pretrained language model used as the starting point.
+    id: https://repo.metadatacenter.org/template-fields/5ca7e6da-470d-46fd-b4b2-12c58bdf8256
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Base+Pretrained+Model
+  - key: Unlabeled Pretraining Corpus Size
+    type: numeric-field
+    name: Unlabeled Pretraining Corpus Size
+    description: Number of unlabeled clinical notes used for further pretraining.
+    id: https://repo.metadatacenter.org/template-fields/e21688b7-a920-465b-bbc4-f393239ce5f5
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:int
+    unit: notes
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Unlabeled+Pretraining+Corpus+Size
+  - key: Gold-Standard Corpus Size
+    type: numeric-field
+    name: Gold-Standard Corpus Size
+    description: Number of manually annotated notes used for fine-tuning/testing.
+    id: https://repo.metadatacenter.org/template-fields/46f0a806-924b-465e-8ff3-21e3e44ec807
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:int
+    unit: notes
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Gold-Standard+Corpus+Size
+  - key: External Validation Corpus Size
+    type: numeric-field
+    name: External Validation Corpus Size
+    description: Number of ChatGPT-4-generated synthetic notes used for external validation.
+    id: https://repo.metadatacenter.org/template-fields/a7224b15-ceed-4094-b466-707b00545f37
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:int
+    unit: notes
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/External+Validation+Corpus+Size
+  - key: Code Repository URL
+    type: link-field
+    name: Code Repository URL
+    description: URL of the code/model repository.
+    id: https://repo.metadatacenter.org/template-fields/519edbfc-64be-4834-ab02-ca301c1daa66
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/Code+Repository+URL
+  - key: Symptom Performance
+    type: element
+    name: Symptom Performance
+    description: Per-symptom frequency and model performance (Table 2 and Figure 3 of the paper).
+    id: https://repo.metadatacenter.org/template-elements/2d86923a-bd35-485a-a832-bd908460b051
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    children:
+      - key: Symptom
+        type: controlled-term-field
+        name: Symptom
+        description: "Cancer symptom group, bound to the Human Phenotype Ontology (HP)."
+        id: https://repo.metadatacenter.org/template-fields/3a779932-5f4d-4bbb-8793-8624202ae7fd
+        status: draft
+        version: 0.0.1
+        modelVersion: 1.6.0
+        datatype: iri
+        values:
+          - type: ontology
+            acronym: HP
+            ontologyName: Human Phenotype Ontology
+            iri: https://data.bioontology.org/ontologies/HP
+        configuration:
+          required: true
+          propertyIri: https://schema.metadatacenter.org/properties/Symptom
+      - key: Gold-Standard Corpus Frequency
+        type: numeric-field
+        name: Gold-Standard Corpus Frequency
+        description: Number of gold-standard corpus notes mentioning this symptom.
+        id: https://repo.metadatacenter.org/template-fields/f8770b8c-467e-4db1-9bb5-a4504e958485
+        status: draft
+        version: 0.0.1
+        modelVersion: 1.6.0
+        datatype: xsd:int
+        configuration:
+          required: true
+          propertyIri: https://schema.metadatacenter.org/properties/Gold-Standard+Corpus+Frequency
+      - key: Synthetic Corpus Frequency
+        type: numeric-field
+        name: Synthetic Corpus Frequency
+        description: Number of ChatGPT-4 synthetic notes mentioning this symptom.
+        id: https://repo.metadatacenter.org/template-fields/4c18290f-a8c5-415b-8c55-ee49404d4c60
+        status: draft
+        version: 0.0.1
+        modelVersion: 1.6.0
+        datatype: xsd:int
+        configuration:
+          required: true
+          propertyIri: https://schema.metadatacenter.org/properties/Synthetic+Corpus+Frequency
+      - key: Internal F1-Score
+        type: numeric-field
+        name: Internal F1-Score
+        description: Internal (gold-standard) validation F1-score.
+        id: https://repo.metadatacenter.org/template-fields/ad7cf0aa-a7db-4c70-a56b-6aa884f50ff7
+        status: draft
+        version: 0.0.1
+        modelVersion: 1.6.0
+        datatype: xsd:double
+        minValue: 0
+        maxValue: 1
+        decimalPlaces: 3
+        configuration:
+          required: true
+          propertyIri: https://schema.metadatacenter.org/properties/Internal+F1-Score
+      - key: Internal AUC
+        type: numeric-field
+        name: Internal AUC
+        description: Internal (gold-standard) validation AUC.
+        id: https://repo.metadatacenter.org/template-fields/250b4ebb-a758-4891-93ec-2df33a615044
+        status: draft
+        version: 0.0.1
+        modelVersion: 1.6.0
+        datatype: xsd:double
+        minValue: 0
+        maxValue: 1
+        decimalPlaces: 3
+        configuration:
+          required: true
+          propertyIri: https://schema.metadatacenter.org/properties/Internal+AUC
+      - key: External F1-Score
+        type: numeric-field
+        name: External F1-Score
+        description: External (synthetic) validation F1-score.
+        id: https://repo.metadatacenter.org/template-fields/5e610229-587d-495c-a902-31d23856d15c
+        status: draft
+        version: 0.0.1
+        modelVersion: 1.6.0
+        datatype: xsd:double
+        minValue: 0
+        maxValue: 1
+        decimalPlaces: 3
+        configuration:
+          required: true
+          propertyIri: https://schema.metadatacenter.org/properties/External+F1-Score
+      - key: External AUC
+        type: numeric-field
+        name: External AUC
+        description: External (synthetic) validation AUC.
+        id: https://repo.metadatacenter.org/template-fields/78c21f5c-3779-4eb9-9dfa-51670cda5ab5
+        status: draft
+        version: 0.0.1
+        modelVersion: 1.6.0
+        datatype: xsd:double
+        minValue: 0
+        maxValue: 1
+        decimalPlaces: 3
+        configuration:
+          required: true
+          propertyIri: https://schema.metadatacenter.org/properties/External+AUC
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/Symptom+Performance
+      multiple: true
+      minItems: 1
