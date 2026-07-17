@@ -1,0 +1,63 @@
+type: instance
+name: SPbE-2026 Dataset Record - SUBJ-002
+description: Domain-specific metadata template describing the columns of the SPbE-2026 synthetic time-restricted-eating pilot study dataset (one row per participant).
+id: https://repo.metadatacenter.org/template-instances/27ec2067-9f8a-4613-a68c-66df5b76204c
+isBasedOn: https://repo.metadatacenter.org/templates/de1fc77b-bcef-4be7-94cf-fa75c1d21a44
+createdOn: 2026-07-17T11:34:35-07:00
+createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+modifiedOn: 2026-07-17T11:34:35-07:00
+modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+children:
+  Subject ID:
+    value: SUBJ-002
+  Enrollment Date:
+    datatype: xsd:date
+    value: 2026-01-22
+  Age:
+    datatype: xsd:int
+    value: 46
+  Sex:
+    id: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20197
+    label: Male
+  Country:
+    id: http://purl.obolibrary.org/obo/GAZ_00002646
+    label: Germany
+  Condition:
+    id: http://purl.obolibrary.org/obo/MONDO_0005827
+    label: prediabetes
+  Study Arm:
+    id: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C174266
+    label: Investigational Arm (TRE)
+  BMI:
+    datatype: xsd:double
+    value: 29.6
+  Baseline Glucose:
+    datatype: xsd:double
+    value: 102
+  Week 12 Glucose:
+    datatype: xsd:double
+    value: 95
+  HbA1c:
+    datatype: xsd:double
+    value: 5.6
+  Systolic BP:
+    datatype: xsd:int
+    value: 112
+  On Glucose Medication:
+    value: "False"
+  Adverse Event:
+    value: "True"
+  Completed Study:
+    value: "True"
+  Visit Date:
+    datatype: xsd:date
+    value: 2026-04-15
+  Adherence:
+    datatype: xsd:double
+    value: 78
+  Investigator ORCID:
+    id: https://orcid.org/0000-0002-1825-0097
+  Reference PMID:
+    id: https://pubmed.ncbi.nlm.nih.gov/31813466
+  Protocol DOI:
+    id: https://doi.org/10.5281/zenodo.0000000

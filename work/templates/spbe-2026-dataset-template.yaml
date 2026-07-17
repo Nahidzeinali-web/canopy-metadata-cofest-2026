@@ -1,10 +1,14 @@
 type: template
 name: SPbE-2026 Dataset Metadata Template
 description: Domain-specific metadata template describing the columns of the SPbE-2026 synthetic time-restricted-eating pilot study dataset (one row per participant).
-id: https://repo.metadatacenter.org/templates/4d210dc3-35fe-4ca4-9aea-8dbbc83a0434
+id: https://repo.metadatacenter.org/templates/de1fc77b-bcef-4be7-94cf-fa75c1d21a44
 status: draft
 version: 0.0.1
 modelVersion: 1.6.0
+createdOn: 2026-07-17T11:34:04-07:00
+createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+modifiedOn: 2026-07-17T11:34:04-07:00
+modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
 children:
   - key: Subject ID
     type: text-field
@@ -14,6 +18,10 @@ children:
     status: draft
     version: 0.0.1
     modelVersion: 1.6.0
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Subject+ID
@@ -27,6 +35,10 @@ children:
     modelVersion: 1.6.0
     datatype: xsd:date
     granularity: day
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Enrollment+Date
@@ -41,6 +53,10 @@ children:
     datatype: xsd:int
     minValue: 0
     unit: years
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Age
@@ -60,6 +76,10 @@ children:
         termLabel: Sex
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28421
         maxDepth: 0
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Sex
@@ -77,6 +97,10 @@ children:
         acronym: GAZ
         ontologyName: Gazetteer
         iri: http://purl.obolibrary.org/obo/gaz.owl
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Country
@@ -96,6 +120,10 @@ children:
         termLabel: disease
         iri: http://purl.obolibrary.org/obo/MONDO_0000001
         maxDepth: 0
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Condition
@@ -115,6 +143,10 @@ children:
         termLabel: Protocol Treatment Arm
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15538
         maxDepth: 0
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Study+Arm
@@ -129,6 +161,10 @@ children:
     datatype: xsd:double
     decimalPlaces: 1
     unit: kg/m2
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/BMI
@@ -143,6 +179,10 @@ children:
     datatype: xsd:double
     decimalPlaces: 1
     unit: mg/dL
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Baseline+Glucose
@@ -157,6 +197,10 @@ children:
     datatype: xsd:double
     decimalPlaces: 1
     unit: mg/dL
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       propertyIri: https://schema.metadatacenter.org/properties/Week+12+Glucose
   - key: HbA1c
@@ -170,6 +214,10 @@ children:
     datatype: xsd:double
     decimalPlaces: 1
     unit: '%'
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/HbA1c
@@ -183,6 +231,10 @@ children:
     modelVersion: 1.6.0
     datatype: xsd:int
     unit: mmHg
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Systolic+BP
@@ -197,6 +249,10 @@ children:
     values:
       - label: "True"
       - label: "False"
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/On+Glucose+Medication
@@ -211,6 +267,10 @@ children:
     values:
       - label: "True"
       - label: "False"
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Adverse+Event
@@ -225,6 +285,10 @@ children:
     values:
       - label: "True"
       - label: "False"
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Completed+Study
@@ -238,6 +302,10 @@ children:
     modelVersion: 1.6.0
     datatype: xsd:date
     granularity: day
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       propertyIri: https://schema.metadatacenter.org/properties/Visit+Date
   - key: Adherence
@@ -253,6 +321,10 @@ children:
     maxValue: 100
     decimalPlaces: 1
     unit: '%'
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       propertyIri: https://schema.metadatacenter.org/properties/Adherence
   - key: Investigator ORCID
@@ -263,6 +335,10 @@ children:
     status: draft
     version: 0.0.1
     modelVersion: 1.6.0
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Investigator+ORCID
@@ -274,6 +350,10 @@ children:
     status: draft
     version: 0.0.1
     modelVersion: 1.6.0
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Reference+PMID
@@ -285,6 +365,10 @@ children:
     status: draft
     version: 0.0.1
     modelVersion: 1.6.0
+    createdOn: 2026-07-17T11:34:04-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-17T11:34:04-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
     configuration:
       required: true
       propertyIri: https://schema.metadatacenter.org/properties/Protocol+DOI
