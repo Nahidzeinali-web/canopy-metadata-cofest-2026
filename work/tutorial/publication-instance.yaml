@@ -1,0 +1,49 @@
+type: instance
+name: "Symptom-BERT: Enhancing Cancer Symptom Detection in EHR Clinical Notes (instance)"
+description: "Simple template capturing title, authors with ORCID, publication date, publication type, and keywords for a journal article."
+id: https://repo.metadatacenter.org/template-instances/90c946b6-b4ae-47f8-b4aa-5f5aa1e3f2f2
+isBasedOn: https://repo.metadatacenter.org/templates/4a646471-db40-4164-b87b-6809d4c987c8
+createdOn: 2026-07-17T10:20:40-07:00
+createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+modifiedOn: 2026-07-17T10:20:40-07:00
+modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+children:
+  Title:
+    value: "Symptom-BERT: Enhancing Cancer Symptom Detection in EHR Clinical Notes"
+  Author:
+    - id: https://repo.metadatacenter.org/template-element-instances/022aa8db-7477-4d89-b4b8-42f43a5bbcf2
+      children:
+        Author Name:
+          value: Nahid Zeinali
+        ORCID iD:
+          id: https://orcid.org/0009-0009-1546-9972
+          label: Nahid Zeinali
+    - id: https://repo.metadatacenter.org/template-element-instances/4bd1468e-6b7a-444c-bc1f-19cc6cf208b7
+      children:
+        Author Name:
+          value: Alaa Albashayreh
+        ORCID iD:
+          id: https://orcid.org/0000-0002-2471-9082
+          label: Alaa Albashayreh
+    - id: https://repo.metadatacenter.org/template-element-instances/4d4d32bd-29e3-4548-b630-121ed42af529
+      children:
+        Author Name:
+          value: Weiguo Fan
+    - id: https://repo.metadatacenter.org/template-element-instances/dc599adb-d243-4a57-8adc-3b6a9853ea7b
+      children:
+        Author Name:
+          value: Stephanie Gilbertson White
+        ORCID iD:
+          id: https://orcid.org/0000-0002-9718-3717
+          label: Stephanie Gilbertson-White
+  Publication Date:
+    datatype: xsd:date
+    value: 2024-05-23
+  Publication Type:
+    id: http://semanticscience.org/resource/SIO_001029
+    label: peer reviewed article
+  Keywords:
+    - value: Cancer symptoms
+    - value: Large language model
+    - value: Multiclassification
+    - value: Natural language processing

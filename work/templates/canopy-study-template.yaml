@@ -1,0 +1,999 @@
+type: template
+name: Canopy Study Metadata Specification v2
+id: https://repo.metadatacenter.org/templates/aff00b59-0bb7-4e40-9437-3216e5fb0ff7
+status: draft
+version: 0.0.1
+modelVersion: 1.6.0
+createdOn: 2026-06-17T14:17:08-07:00
+createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+modifiedOn: 2026-06-18T13:36:03-07:00
+modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+children:
+  - key: Center
+    type: text-field
+    name: Center
+    id: https://repo.metadatacenter.org/template-fields/7eddf0d8-2b3c-47b0-a849-e535722c4a29
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/e3d2b1fb-6f2b-4e17-9e7e-8e9614b98263
+  - key: Study Name
+    type: text-field
+    name: Study Name
+    id: https://repo.metadatacenter.org/template-fields/838e4472-ac0c-4f83-8fe3-2538b5945fec
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/a90fb6b4-d918-484c-a9e0-03dfef7ff677
+  - key: Access Level
+    type: radio-field
+    name: Access Level
+    id: https://repo.metadatacenter.org/template-fields/89314c1c-d298-4e21-87da-245fb4b340e3
+    modelVersion: 1.6.0
+    values:
+      - label: Public
+        selected: true
+      - label: Limited Access
+      - label: Private
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/74f573ec-854b-47a4-b204-5129ec11fa0c
+  - key: Required Documents
+    type: checkbox-field
+    name: Required Documents
+    id: https://repo.metadatacenter.org/template-fields/08719b6b-e131-4dd4-a347-c381682e8ad3
+    modelVersion: 1.6.0
+    values:
+      - label: Institutional Certification
+      - label: Data Sharing & Submission Information
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/1a07902a-b6e9-4e47-9774-7bdd0a2bd105
+  - key: Estimated Number of Study Participants
+    type: numeric-field
+    name: Estimated Number of Study Participants
+    id: https://repo.metadatacenter.org/template-fields/2a756850-dc50-4803-aab3-3bc7282a5653
+    modelVersion: 1.6.0
+    datatype: xsd:decimal
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/26faf3ad-de12-4311-b8fc-890114a6352d
+  - key: Is it a Multi-Center Study?
+    type: checkbox-field
+    name: Is it a Multi-Center Study?
+    id: https://repo.metadatacenter.org/template-fields/4ba9d2bc-e63f-43f2-88e3-62a7f37fc8c3
+    modelVersion: 1.6.0
+    values:
+      - label: Multi-Center Study
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/afb42b1d-1475-4680-92e8-ebb5a483f07a
+  - key: "If multi-center study, list study sites"
+    type: text-field
+    name: "If multi-center study, list study sites"
+    id: https://repo.metadatacenter.org/template-fields/27512c04-6aa7-46db-b5a3-71c5ab5b8fdf
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/68fcff67-a4ef-4618-91ab-21b7ee3eb14b
+  - key: Data Availability
+    type: checkbox-field
+    name: Data Availability
+    id: https://repo.metadatacenter.org/template-fields/af43a025-645d-4be4-a3ef-eda680fad30f
+    modelVersion: 1.6.0
+    values:
+      - label: Array Express
+      - label: ClinVar
+      - label: dbGaP
+      - label: dbVar
+      - label: dbSNP
+      - label: ENA
+      - label: GenBank
+      - label: GEO
+      - label: MGI
+      - label: RADx Data Hub
+      - label: Sequence Read Archive (SRA)
+      - label: Trace Archive
+      - label: Other
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/fe87e2ca-69e2-4fb6-bbcb-59e8c1465c5a
+  - key: Other Data Availability
+    type: text-field
+    name: Other Data Availability
+    id: https://repo.metadatacenter.org/template-fields/93b6fa26-be4b-46a5-af05-677b0a7f927b
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/a9ce74e1-daab-431c-b616-7fa939ebd57f
+      multiple: true
+      minItems: 0
+  - key: Submission Date
+    type: temporal-field
+    name: Submission Date
+    id: https://repo.metadatacenter.org/template-fields/a11672d6-7e88-4e96-a957-478368064418
+    modelVersion: 1.6.0
+    datatype: xsd:date
+    granularity: day
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/61a727ed-8815-43a9-aab0-aaa848a3f555
+  - key: Data submission timeline details
+    type: text-field
+    name: Data submission timeline details
+    id: https://repo.metadatacenter.org/template-fields/19533662-a1ce-4eac-ac84-cac43e295f57
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/4c3c2652-8ef0-4da9-a42a-94c8db04b741
+  - key: Target Data Delivery Date
+    type: temporal-field
+    name: Target Data Delivery Date
+    id: https://repo.metadatacenter.org/template-fields/dfd4f55b-15c3-4873-8cf5-5b42e5ebf4bd
+    modelVersion: 1.6.0
+    datatype: xsd:date
+    granularity: day
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/dd766e19-fea8-4a3f-8370-6d90d37beac2
+  - key: Estimated Study Data Size (GB)
+    type: numeric-field
+    name: Estimated Study Data Size (GB)
+    id: https://repo.metadatacenter.org/template-fields/1e352bf3-599f-4162-ac55-c1833014502f
+    modelVersion: 1.6.0
+    datatype: xsd:double
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/efc794d7-c8eb-4f6e-84a9-9a10d2751926
+  - key: PI Name
+    type: text-field
+    name: PI Name
+    id: https://repo.metadatacenter.org/template-fields/4dc63d32-b17b-4d03-ad32-9e9215ad5b93
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/37fd24c7-2a57-47a8-8d87-76f772bdb305
+  - key: PI Email
+    type: email-field
+    name: PI Email
+    id: https://repo.metadatacenter.org/template-fields/31ad16d0-c5c9-4e3e-ace5-a05c18835273
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/f0e12b0a-273d-45ea-b27f-d21aa0eb5e6d
+  - key: PI Institution
+    type: text-field
+    name: PI Institution
+    id: https://repo.metadatacenter.org/template-fields/eacea247-7c72-4c8d-918c-53b677d704e0
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/93495749-f8be-43f8-9afb-8fe408e3af0d
+  - key: Data Submitter Name
+    type: text-field
+    name: Data Submitter Name
+    id: https://repo.metadatacenter.org/template-fields/161c54d5-5e52-43b6-9584-33df44977c29
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/1c8375c5-c43d-45e2-811b-e3b650370e10
+  - key: Data Submitter Email
+    type: email-field
+    name: Data Submitter Email
+    id: https://repo.metadatacenter.org/template-fields/4b70f66d-a7ba-4bdd-a632-e085c2d69e57
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/2b8f1259-6a2c-4868-ae15-7b9de2b5bcb6
+  - key: 053aef11-6708-49ee-99ab-b00f9536b602
+    type: static-section-break
+    name: Funding Information
+    id: https://repo.metadatacenter.org/template-fields/c095c8dc-da1d-4fcb-b0e0-ee4e694ac9aa
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      overrideLabel: ' '
+  - key: Grant or Contract Number(s)
+    type: text-field
+    name: Grant or Contract Number(s)
+    id: https://repo.metadatacenter.org/template-fields/599db973-bd65-4d5c-a5f7-f9a85349bdb0
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/b378d7b1-cba2-472a-afbf-4798eab7955c
+      multiple: true
+      minItems: 1
+  - key: NIH Program Officer
+    type: text-field
+    name: NIH Program Officer
+    id: https://repo.metadatacenter.org/template-fields/a2ea1f42-ddfe-42f9-b624-7e70a8cf88fd
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/49fd8238-99e4-4f90-aa22-709c0d8beaae
+  - key: NIH Institute / Center
+    type: checkbox-field
+    name: NIH Institute / Center
+    id: https://repo.metadatacenter.org/template-fields/9ded3ddf-914c-4078-9ecc-ad61188959bf
+    modelVersion: 1.6.0
+    values:
+      - label: NCATS
+      - label: NCCIH
+      - label: NCI
+      - label: NDA
+      - label: NEI
+      - label: NHGRI
+      - label: NHLBI
+      - label: NIA
+      - label: NIAAA
+      - label: NIAID
+      - label: NIAMS
+      - label: NIBIB
+      - label: NICHD
+      - label: NIDA
+      - label: NIDCD
+      - label: NIDCR
+      - label: NIDDK
+      - label: NIEHS
+      - label: NIGMS
+      - label: NIH CC
+      - label: NIH OD
+      - label: NIMH
+      - label: NIMHD
+      - label: NINDS
+      - label: NINR
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/ff30e315-579e-4610-a538-3af316fc3726
+  - key: FOA Number
+    type: text-field
+    name: FOA Number
+    id: https://repo.metadatacenter.org/template-fields/543e68e8-ab4c-4ae6-ba72-071665a62a52
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/81bfe156-5f42-4e6d-ab67-c445265b32bc
+      multiple: true
+      minItems: 1
+  - key: Study Start Date
+    type: temporal-field
+    name: Study Start Date
+    id: https://repo.metadatacenter.org/template-fields/851844b7-c47b-434b-a1eb-ce40db4ae4b5
+    modelVersion: 1.6.0
+    datatype: xsd:date
+    granularity: day
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/9dc64bbd-0ff5-4d4a-ab03-13ff469401bc
+  - key: Study End Date
+    type: temporal-field
+    name: Study End Date
+    id: https://repo.metadatacenter.org/template-fields/4f2cabee-6d29-4550-8dd8-181fcda2bd08
+    modelVersion: 1.6.0
+    datatype: xsd:date
+    granularity: day
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/8558c8a5-c090-475f-9ec4-bc0b89edd8c9
+  - key: Study Domain
+    type: checkbox-field
+    name: Study Domain
+    id: https://repo.metadatacenter.org/template-fields/8fb8e17c-021f-4020-bb60-34fa37b3c25a
+    modelVersion: 1.6.0
+    values:
+      - label: Artificial Intelligence or Machine Learning
+      - label: At-Home or Over-the-Counter (OTC) Self-Testing
+      - label: Biosensor Technologies
+      - label: Community Outreach Programs
+      - label: Comorbidities
+      - label: COVID Hotspots
+      - label: COVID in School Settings
+      - label: COVID Testing Deserts
+      - label: Diagnostic Testing
+      - label: Digital Health Applications
+      - label: Disease Surveillance
+      - label: Health Behaviors
+      - label: Immune Responses
+      - label: Influenza
+      - label: Long COVID
+      - label: Medical Device or Tool Development
+      - label: Mental Health
+      - label: Mobile Unit Testing
+      - label: Multimodal Surveillance
+      - label: Multisystem Inflammatory Syndrome (MIS)
+      - label: Multisystem Inflammatory Syndrome in Children (MIS-C)
+      - label: Next Generation Sequencing (NGS)
+      - label: Novel Biosensing or VOC
+      - label: Pandemic Perceptions or Decision-Making
+      - label: Point-of-Care (POC) Testing
+      - label: Rapid Diagnostic Test (RDT)
+      - label: Screening Testing
+      - label: Serological or Antibody Testing
+      - label: Seroprevalence
+      - label: Social Determinants of Health
+      - label: Substance Use
+      - label: Testing Rate or Uptake
+      - label: Vaccination Rate or Uptake
+      - label: Variants
+      - label: Virological Testing
+      - label: Wastewater Surveillance
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/3cc14e65-a37d-49c8-a964-c9885cbb3361
+  - key: "Other Domain, Specify"
+    type: text-field
+    name: "Other Domain, Specify"
+    id: https://repo.metadatacenter.org/template-fields/1e4249f1-04e2-4521-aadc-692880fe9d26
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/33ba2e24-e763-4ae0-a2b4-1a135408a1c5
+      multiple: true
+      minItems: 0
+  - key: Data Collection Methods
+    type: checkbox-field
+    name: Data Collection Methods
+    id: https://repo.metadatacenter.org/template-fields/d7ee9110-9095-4958-b0e1-f635622ad6ad
+    modelVersion: 1.6.0
+    values:
+      - label: Antibody or Adaptive Immune Response Testing
+      - label: Antigen Testing Device
+      - label: Biobank Samples
+      - label: Breath Analysis or Airborne Detection Device
+      - label: Chemosensory Testing Device
+      - label: Contact Tracing
+      - label: Disease Registry
+      - label: Electrochemical Testing Device
+      - label: Interview or Focus Group
+      - label: Molecular Nucleic Acid or PCR Testing Device
+      - label: Real-World Data
+      - label: Smartphone
+      - label: Survey
+      - label: Unspecified COVID Testing Device
+      - label: Wastewater Sampling
+      - label: Wearable
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/77e9b58d-8119-41e7-b77a-1f997af7d4c1
+  - key: Other Data Collection Methods
+    type: text-field
+    name: Other Data Collection Methods
+    id: https://repo.metadatacenter.org/template-fields/4a860338-e720-474f-b37c-164f21de9aa2
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/532392d2-badf-44b4-8bf6-8e14279a6c14
+      multiple: true
+      minItems: 0
+  - key: Study Population Focus
+    type: checkbox-field
+    name: Study Population Focus
+    id: https://repo.metadatacenter.org/template-fields/a6f0ebba-7bad-4f83-9ea1-b2e94bb71489
+    modelVersion: 1.6.0
+    values:
+      - label: Adults
+      - label: African Americans
+      - label: Asians
+      - label: Children
+      - label: Dialysis Patients
+      - label: Essential Workers
+      - label: Hispanics or Latinos
+      - label: Homeless or Unhoused Populations
+      - label: Immigrants
+      - label: Incarcerated or Institutionalized Populations
+      - label: Intellectual or Developmental Disabilities
+      - label: Lower Socioeconomic Status (SES) Populations
+      - label: N/A
+      - label: Native Hawaiians or Other Pacific Islanders
+      - label: Older Adults or Elderly
+      - label: People Living with HIV/AIDS
+      - label: Pregnant or Nursing Women
+      - label: Racial or Ethnic Minorities
+      - label: Rural Communities
+      - label: School Communities
+      - label: Sexual or Gender Minorities
+      - label: Underserved or Vulnerable Populations
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/6b45b13c-4709-4964-8dfc-ad28def3bd8d
+  - key: Clinical Trials gov URL
+    type: link-field
+    name: Clinical Trials gov URL
+    id: https://repo.metadatacenter.org/template-fields/1c087212-88bf-4382-b4ca-5e23bdaf3539
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/496c3d24-e5fd-4bd4-9980-d4e7d27c141c
+  - key: Study Website URL
+    type: link-field
+    name: Study Website URL
+    id: https://repo.metadatacenter.org/template-fields/89b2b655-0bca-47b3-afcf-4ef0cbf74d29
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/68fc4aaf-60f5-417c-997b-bdf8e305653e
+  - key: Primary Publication URL
+    type: link-field
+    name: Primary Publication URL
+    id: https://repo.metadatacenter.org/template-fields/ae4b5b9c-4a3f-422e-b7bc-7391b18f3644
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/323a9da5-33aa-4c63-b053-3aa01af7b92e
+      multiple: true
+      minItems: 0
+  - key: Study Design
+    type: checkbox-field
+    name: Study Design
+    id: https://repo.metadatacenter.org/template-fields/5baae1a1-a3be-4959-b042-cd1f89776a30
+    modelVersion: 1.6.0
+    values:
+      - label: Case-Control
+      - label: Clinical Genetic Testing
+      - label: Cross-Sectional
+      - label: Device Validation
+      - label: Device Verification
+      - label: Interventional or Clinical Trial
+      - label: Longitudinal Cohort
+      - label: Mixed Methods
+      - label: Observational
+      - label: Open Cohort
+      - label: Time-Series
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/b368c75f-fbf1-46c4-b161-00575b1b6ee5
+  - key: Other Study Design
+    type: text-field
+    name: Other Study Design
+    id: https://repo.metadatacenter.org/template-fields/608d5471-6467-413f-ac84-5285f122a594
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/8fbd5a7e-95aa-4ce4-a357-12f2d6d9fcae
+      multiple: true
+      minItems: 0
+  - key: Species
+    type: checkbox-field
+    name: Species
+    id: https://repo.metadatacenter.org/template-fields/664330d2-9ea5-4bbe-abae-2ad7b5237c2f
+    modelVersion: 1.6.0
+    values:
+      - label: Human
+      - label: Non-Human
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/1c72fe29-b869-4be6-9257-60cd537e387e
+  - key: Sample Collection
+    type: checkbox-field
+    name: Sample Collection
+    id: https://repo.metadatacenter.org/template-fields/3f1fa813-9efe-4bc1-afab-98569d3d2038
+    modelVersion: 1.6.0
+    values:
+      - label: Prospective Sample
+      - label: Existing (Legacy)
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/ea6f3dac-39b5-47f2-92a3-35f31152c4cd
+  - key: Data Types
+    type: checkbox-field
+    name: Data Types
+    id: https://repo.metadatacenter.org/template-fields/35079688-de38-4ad2-b125-43137b82d78a
+    modelVersion: 1.6.0
+    values:
+      - label: Behavioral
+      - label: Biologic Specimens
+      - label: Biosensor
+      - label: Chemosensor
+      - label: Clinical
+      - label: Cognitive
+      - label: Electronic Medical Records
+      - label: Environmental
+      - label: Family History
+      - label: Genomic
+      - label: Genotyping
+      - label: Geospatial
+      - label: Imaging
+      - label: Immunological
+      - label: Individual Genotype
+      - label: Individual Phenotype
+      - label: Individual Sequencing
+      - label: Metabolomic
+      - label: Metagenomic
+      - label: Microscopy
+      - label: Mobile
+      - label: Other
+      - label: Physical Activity
+      - label: Proteomic
+      - label: Psychological
+      - label: Questionnaire or Survey
+      - label: Sequencing
+      - label: Social
+      - label: Supporting Documents
+      - label: Temporal
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/908c2caa-e3a7-4a54-abb2-04a6f9ff0f4c
+  - key: Other Data Types
+    type: text-field
+    name: Other Data Types
+    id: https://repo.metadatacenter.org/template-fields/6929df32-5360-41b7-ae74-fbd88d2ef360
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/37c3750f-6591-4212-8505-5c7f048c3c11
+      multiple: true
+      minItems: 0
+  - key: Genomic Data Types
+    type: checkbox-field
+    name: Genomic Data Types
+    id: https://repo.metadatacenter.org/template-fields/18cd161b-9b56-4a82-ad70-f32c1f6fe01a
+    modelVersion: 1.6.0
+    values:
+      - label: Aggregate Data
+      - label: Individual-level Data
+      - label: Non-human Data
+      - label: Other
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/e64a5dec-ad7e-466d-a466-bdf91deddd07
+  - key: Other Genomic Data Types
+    type: text-field
+    name: Other Genomic Data Types
+    id: https://repo.metadatacenter.org/template-fields/a68124f0-50c5-4ef2-bb15-8ab796de5bdc
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/c9f74603-a09c-4dfb-a1e5-4f8daa93a2c1
+      multiple: true
+      minItems: 0
+  - key: Phenotypes
+    type: checkbox-field
+    name: Phenotypes
+    id: https://repo.metadatacenter.org/template-fields/66c5bd9c-b551-4183-b032-d60e5aa949ef
+    modelVersion: 1.6.0
+    values:
+      - label: Aggregate Data
+      - label: Individual-level Data
+      - label: Non-human Data
+      - label: Other
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/bb3aba06-e07d-4471-82ac-ef62249ac5f8
+  - key: Other Phenotypes
+    type: text-field
+    name: Other Phenotypes
+    id: https://repo.metadatacenter.org/template-fields/c76629ae-e1ab-4cdb-93ae-9c9852355f36
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/c9e28656-dd2e-482b-8bb5-eda44c41c79e
+      multiple: true
+      minItems: 0
+  - key: Sample Types
+    type: checkbox-field
+    name: Sample Types
+    id: https://repo.metadatacenter.org/template-fields/ff372c7b-0c68-43ce-9a02-323987b871a8
+    modelVersion: 1.6.0
+    values:
+      - label: DNA
+      - label: "From Repository [free text]"
+      - label: Germline
+      - label: Microbiome
+      - label: Mitochondria
+      - label: Other
+      - label: RNA
+      - label: Single Cell
+      - label: Tumor/Natural
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/0590face-9f5c-4ac5-bbee-06ec11e664a7
+  - key: Other Sample Types
+    type: text-field
+    name: Other Sample Types
+    id: https://repo.metadatacenter.org/template-fields/202759ca-833f-468c-abd8-91d5b5de95b6
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/c2148c72-1281-4d03-9767-d87ab2edcfbf
+      multiple: true
+      minItems: 0
+  - key: Genotypes
+    type: checkbox-field
+    name: Genotypes
+    id: https://repo.metadatacenter.org/template-fields/c55d1d7c-f493-43f8-bbcc-f80a00665459
+    modelVersion: 1.6.0
+    values:
+      - label: Array CGH CNVs
+      - label: Array-derived Genotypes
+      - label: CNV calls derived from Sequencing
+      - label: CNV calls from microarray
+      - label: Genotype calls derived from Sequence
+      - label: Non-human data
+      - label: Other
+      - label: Somatic SNV (.MAF)
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/12692abb-4426-464f-814d-24ade580d92b
+  - key: Other Genotypes
+    type: text-field
+    name: Other Genotypes
+    id: https://repo.metadatacenter.org/template-fields/3f87e730-1470-4da1-9db6-861954236f25
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/a3dfaee6-1b21-4c27-bb81-b917f859f610
+      multiple: true
+      minItems: 0
+  - key: Sequencing Data Types
+    type: checkbox-field
+    name: Sequencing Data Types
+    id: https://repo.metadatacenter.org/template-fields/5995cde4-194e-45c7-a286-c5d16a2b5375
+    modelVersion: 1.6.0
+    values:
+      - label: 16S rRNA
+      - label: Epigenomic Marks
+      - label: Other
+      - label: Sanger
+      - label: Targeted Exome
+      - label: Targeted Genome
+      - label: Targeted Transcriptome
+      - label: Whole Exome
+      - label: Whole Genome
+      - label: Whole Transcriptome
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/ecb68cb5-ea2a-48b7-8b34-b5a6c160d3d2
+  - key: Other Sequencing Data Types
+    type: text-field
+    name: Other Sequencing Data Types
+    id: https://repo.metadatacenter.org/template-fields/3cce56ee-610d-47c1-bd1c-ef5352ef5098
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/a86f7e7a-ca95-450e-bad1-fb549173d9ef
+      multiple: true
+      minItems: 0
+  - key: Genomic Analyses Types
+    type: checkbox-field
+    name: Genomic Analyses Types
+    id: https://repo.metadatacenter.org/template-fields/318644b8-d316-4c96-bc4f-41f9a9660c88
+    modelVersion: 1.6.0
+    values:
+      - label: Array-derived Expression
+      - label: Array-derived Methylation
+      - label: Association/Linkage Results
+      - label: Other
+      - label: RNA Seq derived Expression
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/d4cd81b0-e57c-4dce-8e93-f9ab882985b5
+  - key: Other Genomic Analyses Types
+    type: text-field
+    name: Other Genomic Analyses Types
+    id: https://repo.metadatacenter.org/template-fields/b129b9fc-3c5d-4f8d-bf46-51246f83ff80
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/8c75dd80-e9d5-4b56-8f22-831d28e4ed91
+      multiple: true
+      minItems: 0
+  - key: Genomic Array Data Types
+    type: checkbox-field
+    name: Genomic Array Data Types
+    id: https://repo.metadatacenter.org/template-fields/12580435-4979-462a-b3bf-21e8e3704c14
+    modelVersion: 1.6.0
+    values:
+      - label: Expression Array
+      - label: Methylation Array
+      - label: Other
+      - label: SNP Array
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/ac474736-d2c9-4396-b3eb-7d78dfcf1973
+  - key: Other Genomic Array Data Types
+    type: text-field
+    name: Other Genomic Array Data Types
+    id: https://repo.metadatacenter.org/template-fields/46db1d76-a805-438b-b93a-76c833d8857f
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/040f7afe-6eb0-4c46-81d4-d698456ead0f
+      multiple: true
+      minItems: 0
+  - key: ee421509-966d-48c7-bacd-e09b194a80a3
+    type: static-section-break
+    name: Acknowledgment
+    id: https://repo.metadatacenter.org/template-fields/26354c0d-bdef-4d6c-9763-6a1f3f316318
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      overrideLabel: ' '
+  - key: Acknowledgment Statement
+    type: text-area-field
+    name: Acknowledgment Statement
+    id: https://repo.metadatacenter.org/template-fields/d8f3d713-aa76-484c-afbc-d5a3f627fbc8
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/55de1f80-766a-418a-ae55-92138743c84a
+  - key: Study Description
+    type: text-area-field
+    name: Study Description
+    id: https://repo.metadatacenter.org/template-fields/b2500617-3ab2-48c3-a513-0877258fcdf9
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/f4c06fc8-eb0d-411b-88bf-5116cbb3e395
+  - key: 70db71c9-670f-4ca9-94d4-8b810740b30b
+    type: static-section-break
+    name: Data Use Limitations
+    id: https://repo.metadatacenter.org/template-fields/d2c42b59-a1f7-4466-a014-25e0b3c5c922
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+  - key: General Research Use
+    type: checkbox-field
+    name: General Research Use
+    id: https://repo.metadatacenter.org/template-fields/8ae95168-84df-4541-9a76-357e6ee41c31
+    modelVersion: 1.6.0
+    values:
+      - label: Collaboration required
+      - label: IRB approval required
+      - label: Not-for-profit Organization
+      - label: Publication required
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/01e842ea-515d-4dda-acbe-80ff97b81072
+  - key: Health/Medical/Biomedical
+    type: checkbox-field
+    name: Health/Medical/Biomedical
+    id: https://repo.metadatacenter.org/template-fields/6cd49548-39ab-42fa-9831-6c5c89687a78
+    modelVersion: 1.6.0
+    values:
+      - label: Collaboration required
+      - label: Health or Biomedical Purpose
+      - label: IRB approval required
+      - label: Not-for-profit use only
+      - label: Publication required
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/1c0842fb-dfef-4b75-b5c6-cb86afdf4bba
+  - key: Conditions/Diseases
+    type: checkbox-field
+    name: Conditions/Diseases
+    id: https://repo.metadatacenter.org/template-fields/9eb362d3-1606-48a3-afd5-8e712175a50a
+    modelVersion: 1.6.0
+    values:
+      - label: Collaboration required
+      - label: Disease-Specific for COVID-19
+      - label: IRB approval required
+      - label: Not-for-profit Organization
+      - label: Publication required
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/81328fdb-6db1-4e91-bf9f-c21f1ef9b23c
+  - key: Related Conditions
+    type: text-field
+    name: Related Conditions
+    id: https://repo.metadatacenter.org/template-fields/35874425-7684-473f-be27-2a205d9d0120
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/8ccf6dbe-c3ea-4d13-9f36-3052faf99743
+  - key: Other Data Use Limitations
+    type: text-field
+    name: Other Data Use Limitations
+    id: https://repo.metadatacenter.org/template-fields/19091dc7-b292-4057-9750-dd1180b33381
+    modelVersion: 1.6.0
+    createdOn: 2026-06-18T13:36:03-07:00
+    createdBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    modifiedOn: 2026-06-18T13:36:03-07:00
+    modifiedBy: https://metadatacenter.org/users/c7dcc3ca-55fe-4ca8-b448-ab110bfe4c95
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/eaae0f3a-426c-4d46-bd83-01d204549415

@@ -1,0 +1,290 @@
+type: template
+name: SPbE-2026 Dataset Metadata Template
+description: Domain-specific metadata template describing the columns of the SPbE-2026 synthetic time-restricted-eating pilot study dataset (one row per participant).
+id: https://repo.metadatacenter.org/templates/4d210dc3-35fe-4ca4-9aea-8dbbc83a0434
+status: draft
+version: 0.0.1
+modelVersion: 1.6.0
+children:
+  - key: Subject ID
+    type: text-field
+    name: Subject ID
+    description: Unique participant identifier.
+    id: https://repo.metadatacenter.org/template-fields/6bd7d77d-0be4-4d8d-ad5b-b2401283ced9
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Subject+ID
+  - key: Enrollment Date
+    type: temporal-field
+    name: Enrollment Date
+    description: Date the participant was enrolled.
+    id: https://repo.metadatacenter.org/template-fields/4cacbc13-129e-4563-ad12-5d00d0b6f0f1
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:date
+    granularity: day
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Enrollment+Date
+  - key: Age
+    type: numeric-field
+    name: Age
+    description: "Participant age at consent, in years."
+    id: https://repo.metadatacenter.org/template-fields/35a1853a-c374-4523-8189-b563509fc0fa
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:int
+    minValue: 0
+    unit: years
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Age
+  - key: Sex
+    type: controlled-term-field
+    name: Sex
+    description: "Participant sex, bound to the NCIT 'Sex' branch."
+    id: https://repo.metadatacenter.org/template-fields/ab23f284-bbfe-4e36-96d8-d76ef247930c
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: iri
+    values:
+      - type: branch
+        ontologyName: NCI Thesaurus
+        acronym: NCIT
+        termLabel: Sex
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28421
+        maxDepth: 0
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Sex
+  - key: Country
+    type: controlled-term-field
+    name: Country
+    description: "Country of the enrolling site, bound to the GAZ (Gazetteer) ontology."
+    id: https://repo.metadatacenter.org/template-fields/bd882afe-c2d3-44f7-a41e-b9db9f26af4e
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: iri
+    values:
+      - type: ontology
+        acronym: GAZ
+        ontologyName: Gazetteer
+        iri: http://purl.obolibrary.org/obo/gaz.owl
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Country
+  - key: Condition
+    type: controlled-term-field
+    name: Condition
+    description: "Condition under study, bound to the MONDO disease branch."
+    id: https://repo.metadatacenter.org/template-fields/7889b3f4-ec8e-4d34-a404-5feecc33e63d
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: iri
+    values:
+      - type: branch
+        ontologyName: Mondo Disease Ontology
+        acronym: MONDO
+        termLabel: disease
+        iri: http://purl.obolibrary.org/obo/MONDO_0000001
+        maxDepth: 0
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Condition
+  - key: Study Arm
+    type: controlled-term-field
+    name: Study Arm
+    description: "Assigned study arm, bound to the NCIT 'Protocol Treatment Arm' branch."
+    id: https://repo.metadatacenter.org/template-fields/f64095aa-22ea-47d0-ab9c-6df191cab4a8
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: iri
+    values:
+      - type: branch
+        ontologyName: NCI Thesaurus
+        acronym: NCIT
+        termLabel: Protocol Treatment Arm
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15538
+        maxDepth: 0
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Study+Arm
+  - key: BMI
+    type: numeric-field
+    name: BMI
+    description: Body mass index at baseline.
+    id: https://repo.metadatacenter.org/template-fields/da57d0c4-d7af-408b-8ab0-da04c7eeb5a2
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:double
+    decimalPlaces: 1
+    unit: kg/m2
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/BMI
+  - key: Baseline Glucose
+    type: numeric-field
+    name: Baseline Glucose
+    description: Fasting plasma glucose at baseline.
+    id: https://repo.metadatacenter.org/template-fields/8cd370bb-e692-4b91-8f65-b347502fca4a
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:double
+    decimalPlaces: 1
+    unit: mg/dL
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Baseline+Glucose
+  - key: Week 12 Glucose
+    type: numeric-field
+    name: Week 12 Glucose
+    description: Fasting plasma glucose at week 12.
+    id: https://repo.metadatacenter.org/template-fields/c372387b-383b-4dd0-b06a-d013d8269648
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:double
+    decimalPlaces: 1
+    unit: mg/dL
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/Week+12+Glucose
+  - key: HbA1c
+    type: numeric-field
+    name: HbA1c
+    description: Glycated hemoglobin percentage.
+    id: https://repo.metadatacenter.org/template-fields/010a3be7-42bd-4c97-8592-7710ed9d3ed1
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:double
+    decimalPlaces: 1
+    unit: '%'
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/HbA1c
+  - key: Systolic BP
+    type: numeric-field
+    name: Systolic BP
+    description: Systolic blood pressure.
+    id: https://repo.metadatacenter.org/template-fields/5ef788d3-1ae2-4833-ba34-d54d598c008d
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:int
+    unit: mmHg
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Systolic+BP
+  - key: On Glucose Medication
+    type: radio-field
+    name: On Glucose Medication
+    description: Whether the participant is on glucose-lowering medication.
+    id: https://repo.metadatacenter.org/template-fields/45acd022-aca4-4bcc-a087-ec8e7d57c6f6
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    values:
+      - label: "True"
+      - label: "False"
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/On+Glucose+Medication
+  - key: Adverse Event
+    type: radio-field
+    name: Adverse Event
+    description: Whether any adverse event was reported for this participant.
+    id: https://repo.metadatacenter.org/template-fields/bc9ae443-bad3-4791-88c8-f864bd8c8056
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    values:
+      - label: "True"
+      - label: "False"
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Adverse+Event
+  - key: Completed Study
+    type: radio-field
+    name: Completed Study
+    description: Whether the participant completed the study through week 12.
+    id: https://repo.metadatacenter.org/template-fields/1364c92c-1ad8-4f86-bce1-3eb5bd422b24
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    values:
+      - label: "True"
+      - label: "False"
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Completed+Study
+  - key: Visit Date
+    type: temporal-field
+    name: Visit Date
+    description: Date of the week-12 visit (if completed).
+    id: https://repo.metadatacenter.org/template-fields/2cfcff8b-b335-403f-b33a-9145dbae0148
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:date
+    granularity: day
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/Visit+Date
+  - key: Adherence
+    type: numeric-field
+    name: Adherence
+    description: Percentage of days the assigned eating window was followed.
+    id: https://repo.metadatacenter.org/template-fields/0d295801-ffdf-4ab9-a9f9-75bda2dc08a7
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:double
+    minValue: 0
+    maxValue: 100
+    decimalPlaces: 1
+    unit: '%'
+    configuration:
+      propertyIri: https://schema.metadatacenter.org/properties/Adherence
+  - key: Investigator ORCID
+    type: ext-orcid-field
+    name: Investigator ORCID
+    description: ORCID iD of the enrolling investigator.
+    id: https://repo.metadatacenter.org/template-fields/bde7320f-df70-44cb-a8d5-d2d856dc6b57
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Investigator+ORCID
+  - key: Reference PMID
+    type: ext-pubmed-field
+    name: Reference PMID
+    description: PubMed ID of the reference publication.
+    id: https://repo.metadatacenter.org/template-fields/f4b1fe47-b8f9-43f2-ab24-211390360949
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Reference+PMID
+  - key: Protocol DOI
+    type: ext-doi-field
+    name: Protocol DOI
+    description: DOI of the study protocol.
+    id: https://repo.metadatacenter.org/template-fields/0b6a27d5-7e5c-45d0-b08b-e0f1f6a6f44e
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Protocol+DOI
