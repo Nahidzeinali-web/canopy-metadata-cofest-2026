@@ -1,0 +1,141 @@
+type: element
+name: Symptom Performance
+description: "Per-symptom frequency and model performance (Table 2 and Figure 3 of Zeinali et al., Symptom-BERT, J Pain Symptom Manage 2024;68:190-198). Reusable across studies reporting per-symptom NLP/ML detection performance."
+id: https://repo.metadatacenter.org/template-elements/2062e7fa-8c35-42fc-b17a-0e224d8214c5
+status: draft
+version: 0.0.1
+modelVersion: 1.6.0
+createdOn: 2026-07-18T07:38:57-07:00
+createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+modifiedOn: 2026-07-18T07:38:57-07:00
+modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+children:
+  - key: Symptom
+    type: controlled-term-field
+    name: Symptom
+    description: "Cancer symptom group, bound to the Human Phenotype Ontology (HP)."
+    id: https://repo.metadatacenter.org/template-fields/08dce45b-fb1c-484a-89f9-20a527c04d08
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: iri
+    values:
+      - type: ontology
+        acronym: HP
+        ontologyName: Human Phenotype Ontology
+        iri: https://data.bioontology.org/ontologies/HP
+    createdOn: 2026-07-18T07:38:57-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-18T07:38:57-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Symptom
+  - key: Gold-Standard Corpus Frequency
+    type: numeric-field
+    name: Gold-Standard Corpus Frequency
+    description: Number of gold-standard corpus notes mentioning this symptom.
+    id: https://repo.metadatacenter.org/template-fields/3b8470df-3aa2-4eea-9528-848c0d0f282e
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:int
+    createdOn: 2026-07-18T07:38:57-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-18T07:38:57-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Gold-Standard+Corpus+Frequency
+  - key: Synthetic Corpus Frequency
+    type: numeric-field
+    name: Synthetic Corpus Frequency
+    description: Number of ChatGPT-4 synthetic notes mentioning this symptom.
+    id: https://repo.metadatacenter.org/template-fields/089e8117-162a-4d0f-a7bb-2099b18296d7
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:int
+    createdOn: 2026-07-18T07:38:57-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-18T07:38:57-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Synthetic+Corpus+Frequency
+  - key: Internal F1-Score
+    type: numeric-field
+    name: Internal F1-Score
+    description: Internal (gold-standard) validation F1-score.
+    id: https://repo.metadatacenter.org/template-fields/e116b335-ac69-4da9-8d66-b70be3d66143
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:double
+    minValue: 0
+    maxValue: 1
+    decimalPlaces: 3
+    createdOn: 2026-07-18T07:38:57-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-18T07:38:57-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Internal+F1-Score
+  - key: Internal AUC
+    type: numeric-field
+    name: Internal AUC
+    description: Internal (gold-standard) validation AUC.
+    id: https://repo.metadatacenter.org/template-fields/21d06200-9022-4144-9a5f-430493f18e24
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:double
+    minValue: 0
+    maxValue: 1
+    decimalPlaces: 3
+    createdOn: 2026-07-18T07:38:57-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-18T07:38:57-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/Internal+AUC
+  - key: External F1-Score
+    type: numeric-field
+    name: External F1-Score
+    description: External (synthetic) validation F1-score.
+    id: https://repo.metadatacenter.org/template-fields/b148e170-2874-4de9-9823-42c19044c9c9
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:double
+    minValue: 0
+    maxValue: 1
+    decimalPlaces: 3
+    createdOn: 2026-07-18T07:38:57-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-18T07:38:57-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/External+F1-Score
+  - key: External AUC
+    type: numeric-field
+    name: External AUC
+    description: External (synthetic) validation AUC.
+    id: https://repo.metadatacenter.org/template-fields/97329b03-ee8a-4a41-b6bd-9e6e42f14722
+    status: draft
+    version: 0.0.1
+    modelVersion: 1.6.0
+    datatype: xsd:double
+    minValue: 0
+    maxValue: 1
+    decimalPlaces: 3
+    createdOn: 2026-07-18T07:38:57-07:00
+    createdBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    modifiedOn: 2026-07-18T07:38:57-07:00
+    modifiedBy: https://metadatacenter.org/users/c6c22043-4c94-4e9a-a1c3-d77eb53f79df
+    configuration:
+      required: true
+      propertyIri: https://schema.metadatacenter.org/properties/External+AUC
